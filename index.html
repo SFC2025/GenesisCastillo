@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="es-AR" data-theme="turquesa">
+  <head>
+    <!-- Suscripción -->
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=ASm_LTa6x8pUxEa6p4UoLKN0zJ68hq4vMzEff4haQ0mNwE77lrQhjC_6RhVGtAQ0HMMWSyVdF4QDpCRU&components=buttons&vault=true&intent=subscription"
+      data-namespace="paypalSUB"
+    ></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Genesis Martinez Castillo — Trabajo Remoto Desde Cero</title>
+    <meta
+      name="description"
+      content="Sitio oficial de Genesis Martinez Castillo. Trabajo remoto desde cero, recursos, guía y productos para iniciar tu carrera desde casa."
+    />
+    <link rel="icon" href="./imagenes/GMC.png" type="image/png" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Génesis Martínez Castillo" />
+    <meta
+      property="og:description"
+      content="Te enseño cómo trabajar remoto desde cero."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./imagenes/Genesis-web.JPG" />
+    <meta property="og:url" content="./" />
+
+    <!-- Tipografía (sistema + Poppins) -->
+    <link rel="preload" as="image" href="./imagenes/Genesis-web.JPG" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      /* Fallback de fuente, evitamos bloqueos si no carga remota */
+      :root {
+        --tmp-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Arial, "Poppins", sans-serif;
+      }
+    </style>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Salto de contenido -->
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="#inicio" class="brand" aria-label="Volver al inicio">
+          <img
+            src="./imagenes/genesislogo.png"
+            alt="GMC"
+            width="36"
+            height="36"
+            loading="eager"
+          />
+          <span class="brand-text">Genesis Martinez Castillo</span>
+        </a>
+
+        <nav class="site-nav" role="navigation" aria-label="Principal">
+          <button
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-list"
+            aria-label="Abrir menú"
+          >
+            <span class="nav-bar"></span><span class="nav-bar"></span
+            ><span class="nav-bar"></span>
+          </button>
+          <ul id="nav-list" class="nav-list">
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="blog.html">Lee mi Blog</a></li>
+            <li><a href="#galeria1">Galería</a></li>
+            <li><a href="#contacto-open" data-open-modal>Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section id="inicio" class="hero" aria-label="Portada">
+        <div class="container hero-inner" id="hero">
+          <div class="hero-media">
+            <img
+              src="./imagenes/Genesis-web.JPG"
+              alt="Retrato de Genesis Martinez Castillo"
+              width="960"
+              height="1200"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="hero-copy">
+            <h1 class="hero-title">Genesis Martinez Castillo</h1>
+            <p class="hero-sub">Reclutadora Remota &amp; Project Manager</p>
+
+            <p class="hero-lead">
+              Conecto empresas con
+              <span class="u-accent">talento de alto nivel</span> y ayudo a
+              profesionales a conseguir su primer trabajo remoto.
+              <span class="break-lg"
+                >Más de 10 años liderando equipos, procesos y proyectos en
+                diferentes industrias.</span
+              >
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn btn-cta" href="#productos">Conocé más</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCTOS / SERVICIOS -->
+      <section id="productos" class="section" aria-labelledby="servicios-title">
+        <div class="container">
+          <h2 id="servicios-title">Servicios</h2>
+
+          <div class="cards services">
+            <!-- Card 1 -->
+            <article class="card service">
+              <div class="card-media">
+                <img
+                  src="./imagenes/productoprofesionales-1.jpg"
+                  alt="Servicios para Profesionales"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3 class="card-title">Para Profesionales</h3>
+
+              <div class="card-content">
+                <p>
+                  Lanza tu carrera remota: potencia tu perfil, evita los errores
+                  que frenan a la mayoría y recibe mentoría y recursos
+                  personalizados para conseguir tu primer trabajo online.
+                </p>
+                <ul class="card-list">
+                  <li>Guías y Ebooks</li>
+                  <li>Kit de Recursos Pro</li>
+                  <li>Mentoría 1:1</li>
+                  <li>Talleres Express</li>
+                </ul>
+              </div>
+
+              <div class="card-actions">
+                <a class="btn btn-cta" href="#recursos">Recursos</a>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card service">
+              <div class="card-media">
+                <img
+                  src="./imagenes/remoto2.jpg"
+                  alt="Servicios para Empresas y Emprendedores"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3 class="card-title">Para Empresas y Emprendedores</h3>
+
+              <div class="card-content">
+                <p>
+                  Recluta talento confiable, organiza tus proyectos y delega con
+                  nuestra Asistencia Virtual Premium.
+                </p>
+                <ul class="card-list">
+                  <li>Reclutamiento Remoto</li>
+                  <li>Gestión de Proyectos</li>
+                  <li>Asistencia Virtual Premium (TIVA)</li>
+                  <li>Consultoría en Delegación</li>
+                </ul>
+              </div>
+
+              <div class="card-actions">
+                <!-- Por ahora abre el modal de contacto; luego apunto al calendario -->
+                <a class="btn btn-outline" href="#contacto" data-open-modal
+                  >Agendar</a
+                >
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card service">
+              <div class="card-media">
+                <img
+                  src="./imagenes/genesis16.jpg"
+                  alt="Servicios Especiales"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3 class="card-title">Servicios Especiales</h3>
+
+              <div class="card-content">
+                <p>
+                  Impulsa tu equipo remoto con capacitaciones, outplacement y
+                  consultoría en políticas de teletrabajo.
+                </p>
+                <ul class="card-list">
+                  <li>Capacitación Empresarial</li>
+                  <li>Outplacement Remoto</li>
+                  <li>Consultoría RRHH Remoto</li>
+                </ul>
+              </div>
+
+              <div class="card-actions">
+                <a class="btn btn-outline" href="#contacto" data-open-modal
+                  >Agendar</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Mini-CTA: recursos + Telegram -->
+      <div class="promo telegram-cta" aria-labelledby="tg-title">
+        <div class="container promo-inner">
+          <div class="promo-copy">
+            <h3 id="tg-title">
+              💎 Acceso Élite <span class="price">– Solo $2.97/mes</span>
+            </h3>
+
+            <h4 class="tg-channel">Canal de Telegram</h4>
+
+            <p class="sub">
+              Prueba <strong>gratis por 7 días</strong> y accede a todo lo que
+              necesitas para impulsar tu carrera remota:
+            </p>
+
+            <ul>
+              <li>✔ Vacantes remotas actualizadas cada semana.</li>
+              <li>✔ Consejos prácticos para mejorar tu perfil de LinkedIn.</li>
+              <li>
+                ✔ Novedades sobre herramientas y recursos para trabajo remoto.
+              </li>
+            </ul>
+          </div>
+
+          <div class="promo-actions">
+            <div id="paypal-button-container-P-6SV06465S5864740NNDAHZ6Y"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOBRE MÍ -->
+      <section id="sobre" class="section alt" aria-labelledby="sobre-title">
+        <div class="container narrow">
+          <h2 id="sobre-title">Sobre mí</h2>
+
+          <p>
+            Soy Genesis Martínez Castillo, dominicana, con más de 10 años de
+            experiencia en reclutamiento, operaciones y gestión de equipos en
+            sectores como ventas, telecomunicaciones y finanzas. Empecé a
+            trabajar a los 12 años y he escalado hasta posiciones directivas en
+            empresas internacionales.
+          </p>
+          <p>
+            Hoy acompaño a profesionales a iniciar o fortalecer su camino en el
+            trabajo remoto, y a empresas a delegar sin miedo. Mi propósito es
+            ayudarte a tener claridad, estrategia y resultados concretos, porque
+            sé lo que significa reinventarse y construir una vida flexible sin
+            perder ingresos ni estabilidad.
+          </p>
+
+          <ul class="about-bullets">
+            <li>10+ años en reclutamiento y operaciones.</li>
+            <li>Experiencia en dirección de equipos y procesos.</li>
+            <li>Asesora a empresas y profesionales en remoto.</li>
+            <li>Fundadora de TIVA, agencia de asistentes virtuales.</li>
+          </ul>
+
+          <!-- Plegable: sin JS -->
+          <!-- Botón que abre el modal -->
+          <a href="#sobre-modal" class="btn btn-outline" data-open-modal>
+            Conoce más de mi historia
+          </a>
+
+          <!-- Modal mini -->
+          <div
+            id="sobre-modal"
+            class="modal"
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="sobre-modal-title"
+          >
+            <div class="modal-backdrop" data-close-modal></div>
+            <div class="modal-dialog modal--narrow">
+              <button
+                class="modal-close"
+                aria-label="Cerrar"
+                data-close-modal
+              ></button>
+
+              <h3 id="sobre-modal-title">Mi historia</h3>
+              <div class="modal-body">
+                <p>
+                  Comencé a trabajar a los 12 años para comprar mis útiles
+                  escolares y pasé por ventas, supermercados,
+                  telecomunicaciones, finanzas y más. A los 26 años, ya era
+                  Directora de Operaciones, liderando a más de 150 personas en
+                  una industria dominada por hombres. Tenía un buen puesto, pero
+                  por dentro me sentía agotada, vacía y desconectada de mí
+                  misma.
+                </p>
+                <p>
+                  Todo cambió cuando descubrí el trabajo remoto. Aprendí que
+                  podía trabajar desde casa, ganar en dólares y euros, cuidar a
+                  mi hija y disfrutar de su crecimiento sin sacrificar mi
+                  carrera. Hoy vivo completamente del trabajo remoto y ayudo a
+                  otras personas a lograr lo mismo: crear ingresos desde
+                  cualquier lugar del mundo, sin perder su vida personal.
+                </p>
+                <p>
+                  Mi misión es enseñarte cómo trabajar remoto desde cero,
+                  construir independencia financiera y encontrar un equilibrio
+                  real entre tu carrera y tu vida personal. No hay fórmulas
+                  mágicas, pero sí un camino claro y probado que puedes seguir.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOG SLIDER -->
+      <section id="blog" class="section" aria-labelledby="blog-title">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="blog-title">Lee mi Blog</h2>
+            <p class="section-desc">
+              Historias, ideas y aprendizajes. Desliza o deja que avance solo.
+            </p>
+          </div>
+
+          <div
+            class="carousel"
+            data-carousel
+            aria-roledescription="carrusel"
+            aria-label="Slider de artículos"
+          >
+            <button
+              class="carousel-btn prev"
+              aria-label="Anterior"
+              data-prev
+            ></button>
+            <div class="track" data-track tabindex="0">
+              <!-- 7 slides (loop infinito por JS) -->
+              <figure class="slide">
+                <img
+                  src="./imagenes/genesis12.jpg"
+                  alt="Publicación del blog 1"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </figure>
+              <figure class="slide">
+                <img
+                  src="./imagenes/genesis8.jpg"
+                  alt="Publicación del blog 2"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </figure>
+              <figure class="slide">
+                <img
+                  src="./imagenes/genesis7.jpg"
+                  alt="Publicación del blog 3"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </figure>
+              <figure class="slide">
+                <img
+                  src="./imagenes/genesis6.jpg"
+                  alt="Publicación del blog 4"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </figure>
+              <figure class="slide">
+                <img
+                  src="./imagenes/genesis5.jpg"
+                  alt="Publicación del blog 5"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </figure>
+              <figure class="slide">
+                <img
+                  src="./imagenes/genesis3.jpg"
+                  alt="Publicación del blog 6"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </figure>
+              <figure class="slide">
+                <img
+                  src="./imagenes/genesis14.jpg"
+                  alt="Publicación del blog 7"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+                <!-- último slide ya cerrado -->
+              </figure>
+            </div>
+            <!-- /.track -->
+
+            <button
+              class="carousel-btn next"
+              aria-label="Siguiente"
+              data-next
+            ></button>
+          </div>
+          <!-- /.carousel -->
+
+          <div class="carousel-cta">
+            <a class="blog-cta blog-cta--outline" href="blog.html" role="button"
+              >Blog</a
+            >
+          </div>
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /#blog.section -->
+      <section
+        class="section travel-strip"
+        aria-label="Libertad de trabajar desde cualquier lugar"
+      >
+        <div class="container">
+          <p class="travel-claim">
+            Puedes viajar por el mundo al no tener que trabajar en una oficina
+          </p>
+        </div>
+      </section>
+
+      <!-- GALERÍA 1 -->
+      <section
+        id="galeria1"
+        class="section alt"
+        aria-labelledby="galeria1-title"
+      >
+        <div class="container">
+          <h2 id="galeria1-title">Galería</h2>
+          <div class="masonry">
+            <figure class="m-item">
+              <img
+                src="./imagenes/Colombia.jpg"
+                alt="Colombia"
+                loading="lazy"
+                width="900"
+                height="600"
+              />
+              <figcaption>Turquía</figcaption>
+            </figure>
+
+            <figure class="m-item">
+              <img
+                src="./imagenes/Turquia.jpg"
+                alt="Turquía"
+                loading="lazy"
+                width="900"
+                height="600"
+              />
+              <figcaption>New York</figcaption>
+            </figure>
+
+            <figure class="m-item">
+              <img
+                src="./imagenes/New York.jpg"
+                alt="Nueva York"
+                loading="lazy"
+                width="900"
+                height="600"
+              />
+              <figcaption>New York</figcaption>
+            </figure>
+
+            <figure class="m-item">
+              <img
+                src="./imagenes/New Jersey.jpg"
+                alt="Nueva Jersey"
+                loading="lazy"
+                width="900"
+                height="600"
+              />
+              <figcaption>New Jersey</figcaption>
+            </figure>
+
+            <figure class="m-item">
+              <img
+                src="./imagenes/Miami.jpg"
+                alt="Miami"
+                loading="lazy"
+                width="900"
+                height="600"
+              />
+              <figcaption>Miami</figcaption>
+            </figure>
+
+            <figure class="m-item">
+              <img
+                src="./imagenes/colombia6.png"
+                alt="Colombia"
+                loading="lazy"
+                width="900"
+                height="600"
+              />
+              <figcaption>República Dominicana</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEXTO PUENTE -->
+      <section id="texto-puente" class="section" aria-label="Reflexión">
+        <div class="container narrow">
+          <h2 id="momentos-title">Momentos</h2>
+          <p>
+            Hay un momento en la vida en el que nos detenemos y nos preguntamos:
+            ¿qué quiero realmente? Para mí, la respuesta fue clara: recuperar mi
+            tiempo, seguir mis prioridades y construir una carrera que me
+            permita vivir y viajar con libertad.
+          </p>
+          <p>
+            Trabajar de manera remota te da la libertad de crear tu propio ritmo
+            y diseñar la vida que quieres. Paso a paso, con constancia y hábitos
+            simples, puedes construir una carrera que se adapte a tus sueños,
+            sin sacrificar lo que más valoras.
+          </p>
+          <p>
+            Si esto resuena contigo, puedo acompañarte a dar esos primeros pasos
+            hacia la libertad de trabajar desde donde quieras.
+          </p>
+        </div>
+      </section>
+
+      <!-- GALERÍA 2 -->
+      <section
+        id="galeria2"
+        class="section alt"
+        aria-labelledby="galeria2-title"
+      >
+        <div class="container">
+          <div class="grid-4">
+            <img src="./imagenes/Colombia3.png" alt="Colombia" loading="lazy" />
+            <img src="./imagenes/colombia4.jpg" alt="Génesis" loading="lazy" />
+            <img src="./imagenes/genesis13.png" alt="Génesis" loading="lazy" />
+            <img src="./imagenes/Colombia2.jpg" alt="Colombia" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA / CONTACTO (abrir modal) -->
+      <section class="section cta" aria-labelledby="cta-title">
+        <div class="container cta-inner">
+          <div>
+            <h2 id="cta-title">Te enseño cómo trabajar remoto desde cero</h2>
+            <p>Comencemos con un mensaje. Te respondo a la brevedad.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-cta" href="#contacto-open" data-open-modal
+              >Escríbeme</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIOS -->
+      <section
+        id="testimonios"
+        class="section"
+        aria-labelledby="testimonios-title"
+      >
+        <div class="container">
+          <h2 id="testimonios-title">Testimonios</h2>
+          <div class="testi">
+            <blockquote class="testi-item">
+              <p>
+                Un placer trabajar con una profesional como Genesis, fue muy
+                clara con las indicaciones y estoy muy agradecida por la
+                oportunidad :)
+              </p>
+              <footer>— Sophia</footer>
+            </blockquote>
+            <blockquote class="testi-item">
+              <p>
+                La experiencia con Genesis ha sido muy satisfactoria, es muy
+                agradable, comunicativa y 100% recomendable.
+              </p>
+              <footer>— Antonio F.</footer>
+            </blockquote>
+            <blockquote class="testi-item">
+              <p>
+                Genesis fue muy asertiva y comunicadora, fue muy clara con los
+                cambios y lo que quería.
+              </p>
+              <footer>— J.C</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section id="recursos" class="section" aria-labelledby="recursos-title">
+      <div class="container">
+        <h2 id="recursos-title">Recursos</h2>
+
+        <ul class="resource-list">
+          <li class="resource-item">
+            <h3>Guía de Trabajo Remoto Desde Cero</h3>
+            <p>Cómo empezar tu carrera desde casa.</p>
+            <a class="btn btn-cta" href="ebook.html">Ver guía</a>
+          </li>
+
+          <li class="resource-item">
+            <h3>Mentoría 1:1</h3>
+            <p>
+              Acompañamiento personalizado para optimizar perfil y aplicar
+              mejor.
+            </p>
+            <a class="btn btn-outline" href="#contacto" data-open-modal
+              >Agendar mentoría</a
+            >
+          </li>
+
+          <li class="resource-item">
+            <h3>Plantilla de CV (Gratis)</h3>
+            <p>Modelo editable para postular más rápido.</p>
+            <!-- Reemplazar con el link real de Drive/descarga -->
+            <a
+              class="btn btn-outline"
+              href="./descargas/cv-template.docx"
+              download
+            >
+              Descargar
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img
+            src="./imagenes/GMC.png"
+            alt="GMC"
+            width="32"
+            height="32"
+            loading="lazy"
+          />
+          <span>Génesis Martínez Castillo</span>
+        </div>
+        <ul class="footer-links social" aria-label="Enlaces de contacto">
+          <li>
+            <a
+              href="#contacto"
+              data-open-modal
+              aria-label="Abrir formulario de contacto"
+            >
+              <img
+                src="./imagenes/correo.png"
+                alt=""
+                width="28"
+                height="28"
+                loading="lazy"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/genesis-martinez-castillo-ba123a257/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <img
+                src="./imagenes/linkedin.png"
+                alt=""
+                width="28"
+                height="28"
+                loading="lazy"
+              />
+            </a>
+          </li>
+        </ul>
+
+        <small class="copy"
+          >© <span id="year"></span> GMC. Hecho con foco y propósito.</small
+        >
+      </div>
+    </footer>
+
+    <!-- MODAL CONTACTO (FormSubmit) -->
+    <div
+      class="modal"
+      id="contacto"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contacto-title"
+      aria-hidden="true"
+    >
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="document">
+        <button class="modal-close" aria-label="Cerrar" data-close-modal>
+          &times;
+        </button>
+        <h2 id="contacto-title">Contacto</h2>
+        <p>Completa el formulario y me pongo en contacto a la brevedad.</p>
+        <form
+          id="contact-form"
+          action="https://formsubmit.co/buscotalento.global@gmail.com"
+          method="POST"
+          novalidate
+        >
+          <!-- FormSubmit config -->
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nuevo mensaje desde el sitio GMC"
+          />
+          <input type="hidden" name="_template" value="table" />
+          <div class="form-grid">
+            <label>
+              <span>Nombre y apellido *</span>
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label>
+              <span>Email *</span>
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+            <label class="full">
+              <span>Mensaje *</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-cta">Enviar</button>
+            <button type="button" class="btn btn-outline" data-close-modal>
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es-AR" data-theme="turquesa">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>¡Gracias por tu compra!</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .gracias {
+        min-height: 70vh;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+      }
+      .panel {
+        max-width: 720px;
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        padding: 1.25rem;
+      }
+      .panel h1 {
+        margin: 0 0 0.5rem;
+      }
+      .sub {
+        color: var(--color-text-2);
+        margin: 0 0 1rem;
+      }
+      .help {
+        font-size: 0.95rem;
+        color: var(--color-text-2);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="gracias">
+      <section class="panel">
+        <h1>¡Gracias por tu compra! 🎉</h1>
+        <p class="sub">Tu guía llegará a tu correo en los próximos minutos.</p>
+
+        <ul>
+          <li>
+            Vas a recibir 2 emails: (1) con la guía adjunta y (2) con la
+            <strong>contraseña</strong> para abrirla.
+          </li>
+          <li>Si no lo ves en 10–15 minutos, revisá “Promociones” o “Spam”.</li>
+        </ul>
+
+        <p class="help">
+          ¿No te llegó? Escribinos a
+          <a href="mailto:buscotalento.global@gmail.com"
+            >buscotalento.global@gmail.com</a
+          >
+          con tu <em>ID de transacción</em> de PayPal.
+        </p>
+        <p class="help">
+          Uso personal. Queda prohibida su redistribución o reventa sin
+          autorización.
+        </p>
+
+        <!-- Aca: bloque que se completa según ?product=... -->
+        <div id="postpay" class="postpay" style="margin-top: 1rem"></div>
+
+        <!-- Dejar el volver al inicio debajo -->
+        <p><a class="btn btn-outline" href="index.html">Volver al inicio</a></p>
+      </section>
+    </main>
+
+    <!-- Aca: script dinámico, justo antes de </body> -->
+    <script>
+      (function () {
+        const qs = new URLSearchParams(location.search);
+        const product = (qs.get("product") || "").toLowerCase();
+        const subId = qs.get("sub") || "";
+        const box = document.getElementById("postpay");
+
+        const tgLink = "https://t.me/+TmuuvN7qXYhkY2Jh";
+
+        let html = "";
+        if (product === "suscripcion") {
+          html = `
+        <h2>¡Suscripción activa! ✅</h2>
+        ${subId ? `<p>ID de suscripción: <code>${subId}</code></p>` : ""}
+        <p>Accedé al canal:</p>
+        <p><a class="btn btn-cta" href="${tgLink}" target="_blank" rel="noopener">Entrar al canal de Telegram</a></p>
+      `;
+        } else if (product === "guia") {
+          const DRIVE_ID = "PON_AQUI_EL_ID_DE_DRIVE"; // <-- reemplazar luego
+          const PASS = "PON_AQUI_LA_CONTRASEÑA"; // <-- opcional (dependiendo que define la cliente)
+
+          html = `
+    <h2>Tu guía está lista 📘</h2>
+    <p>Puedes descargarla ahora mismo:</p>
+    <p>
+      <a class="btn btn-cta"
+         href="https://drive.google.com/uc?export=download&id=${DRIVE_ID}"
+         target="_blank" rel="noopener">
+        Descargar e-book (PDF)
+      </a>
+    </p>
+    ${
+      PASS
+        ? `<p class="help" style="margin-top:.75rem">
+      <strong>Contraseña del PDF:</strong> ${PASS}
+    </p>`
+        : ""
+    }
+    <p style="margin-top:1rem">Como regalo, también podés entrar al canal:</p>
+    <p><a class="btn btn-outline" href="${tgLink}" target="_blank" rel="noopener">Entrar al canal de Telegram</a></p>
+  `;
+        }
+
+        box.innerHTML = html;
+      })();
+    </script>
+  </body>
+</html>
