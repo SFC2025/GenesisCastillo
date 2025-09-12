@@ -1,6 +1,6 @@
-# 🌐 Génesis Martínez Castillo - Landing Page
+# 🌐 Genesis Martinez Castillo - Landing Page
 
-Landing page profesional creada para **Génesis Martínez Castillo**.  
+Landing page profesional creada para **Genesis Martinez Castillo**.  
 El sitio incluye portada con imagen destacada, presentación personal, productos y servicios, blog, galería de imágenes y sección de contacto.
 
 ## ✨ Características
