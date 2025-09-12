@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es-AR" data-theme="turquesa">
+  <head>
+    <!-- PayPal SDK (Hosted Buttons) -->
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=BAAP7BiuV6QunHHh02T2CM6SucywtCkUz9Ek5u2UySIbPCYJw5jwLongDPW5Q70a0nH1fydK-xHyNbm9j0&components=hosted-buttons&disable-funding=venmo&currency=USD"
+      defer
+    ></script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mentoría 1:1 — Genesis Martinez Castillo</title>
+    <meta
+      name="description"
+      content="Sesión personalizada de 1 hora para trazar tu plan de acción y empezar a generar resultados desde casa."
+    />
+
+    <link rel="icon" href="./imagenes/genesislogo.png" type="image/png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mentoria.css" />
+  </head>
+
+  <body class="mentoria-page">
+    <!-- ===== Header ===== -->
+    <header class="site-header compact" role="banner">
+      <div class="container header-inner">
+        <a href="index.html#inicio" class="brand" aria-label="Volver al inicio">
+          <img
+            src="./imagenes/genesislogo.png"
+            alt="GMC"
+            width="28"
+            height="28"
+          />
+          <span class="brand-text">Genesis Martinez Castillo</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          aria-label="Abrir menú"
+          aria-controls="mini-nav"
+          aria-expanded="false"
+          onclick="document.querySelector('.site-header').classList.toggle('is-open')"
+        >
+          <span class="nav-bar"></span>
+          <span class="nav-bar"></span>
+          <span class="nav-bar"></span>
+        </button>
+
+        <ul id="mini-nav" class="mini-nav" role="menu">
+          <li><a href="index.html#inicio" role="menuitem">Inicio</a></li>
+          <li><a href="index.html#productos" role="menuitem">Productos</a></li>
+          <li>
+            <a href="index.html#contacto" data-open-modal role="menuitem"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section
+      id="mentoria-hero"
+      class="hero simple hero-cover"
+      style="
+        background: url('./imagenes/mentoria-hero.jpg') center/cover no-repeat;
+      "
+      aria-label="Mentoría 1 a 1"
+    >
+      <div class="container hero-center">
+        <h1>Mentoría 1&nbsp;:&nbsp;1</h1>
+        <p class="sub">
+          Sesión personalizada de <strong>1 hora</strong> para trazar tu plan de
+          acción y empezar a generar resultados desde casa.
+        </p>
+
+        <div class="cta-row">
+          <a href="#pago" class="btn cta">RESERVA TU SESIÓN 1 A 1</a>
+        </div>
+      </div>
+    </section>
+
+    <main id="mentoria">
+      <!-- ===== Beneficios ===== -->
+      <section class="section">
+        <div class="container narrow">
+          <p class="intro">
+            En esta sesión trabajamos mano a mano sobre tu situación actual para
+            que salgas con un plan claro y accionable.
+          </p>
+
+          <h2>Incluye</h2>
+          <ul class="bullets checks">
+            <li>Sesión 1 a 1 (1 hora)</li>
+            <li>Guía completa “Acceso al Trabajo Remoto desde Cero”</li>
+            <li>Acceso de por vida a la comunidad privada en Telegram</li>
+            <li>Plantilla profesional de CV lista para usar</li>
+            <li>
+              Evaluación completa de tu perfil de LinkedIn con recomendaciones
+            </li>
+          </ul>
+
+          <h3 style="margin-top: 1.25rem">Ideal para</h3>
+          <p class="intro">
+            Personas que quieren empezar desde cero, recibir acompañamiento
+            personalizado y acelerar resultados sin perder tiempo.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== Pago / CTA ===== -->
+      <section id="pago" class="section">
+        <div class="container narrow">
+          <div class="paycard">
+            <div class="paycard-text">
+              <h3 style="margin: 0">Reserva tu sesión</h3>
+              <p class="muted" style="margin: 0.25rem 0 0.75rem">
+                Precio: <strong>USD 50</strong> (pago único)
+              </p>
+              <p class="muted small">
+                Al finalizar el pago, recibirás un correo para coordinar día y
+                horario.
+              </p>
+            </div>
+
+            <!-- Contenedor del botón hospedado -->
+            <div id="paypal-container-Y5697J7ZKWU32"></div>
+          </div>
+        </div>
+
+        <!-- Render del Hosted Button -->
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            if (window.paypal && paypal.HostedButtons) {
+              paypal
+                .HostedButtons({ hostedButtonId: "Y5697J7ZKWU32" })
+                .render("#paypal-container-Y5697J7ZKWU32");
+            }
+          });
+        </script>
+      </section>
+    </main>
+
+    <!-- ===== Footer  ===== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img
+            src="./imagenes/GMC.png"
+            alt="GMC"
+            width="32"
+            height="32"
+            loading="lazy"
+          />
+          <span>Génesis Martínez Castillo</span>
+        </div>
+        <ul class="footer-links social" aria-label="Enlaces de contacto">
+          <li>
+            <!-- abre el modal -->
+            <a
+              href="#contacto"
+              data-open-modal
+              aria-label="Abrir formulario de contacto"
+            >
+              <img
+                src="./imagenes/correo.png"
+                alt=""
+                width="22"
+                height="22"
+                loading="lazy"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/genesis-martinez-castillo-ba123a257/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <img
+                src="./imagenes/linkedin.png"
+                alt=""
+                width="22"
+                height="22"
+                loading="lazy"
+              />
+            </a>
+          </li>
+        </ul>
+
+        <small class="copy"
+          >© <span id="year"></span> GMC. Hecho con foco y propósito.</small
+        >
+      </div>
+    </footer>
+
+    <!-- Si se usa modal de contacto global, el script existente debería manejar [data-open-modal] -->
+    <script src="./script.js" defer></script>
+  </body>
+</html>

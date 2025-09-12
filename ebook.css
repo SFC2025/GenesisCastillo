@@ -231,3 +231,25 @@ main#ebook .bullets.checks li::before {
   top: 0.05rem;
   font-size: 1rem;
 }
+
+/* Tarjeta de pago reutilizable Igual a mentoría - no borrar */
+.paycard {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(16px, 3.5vw, 24px);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-xl, 20px);
+  background: #fff;
+  box-shadow: var(--shadow-1, 0 8px 24px rgba(2, 8, 20, 0.06));
+}
+.paycard .muted {
+  color: var(--color-text-2, #475569);
+}
+.paycard .small {
+  font-size: 0.95rem;
+}
+
+/* Fuerzo más aire sobre la paycard del e-book */
+main#ebook .paycard {
+  margin-top: 30px !important;
+}
