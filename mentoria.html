@@ -50,9 +50,7 @@
           <li><a href="index.html#inicio" role="menuitem">Inicio</a></li>
           <li><a href="index.html#productos" role="menuitem">Productos</a></li>
           <li>
-            <a href="index.html#contacto" data-open-modal role="menuitem"
-              >Contacto</a
-            >
+            <a href="#contacto" data-open-modal role="menuitem">Contacto</a>
           </li>
         </ul>
       </div>
@@ -194,7 +192,67 @@
         >
       </div>
     </footer>
+    <!-- MODAL CONTACTO (FormSubmit) -->
+    <div
+      class="modal"
+      id="contacto"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contacto-title"
+      aria-hidden="true"
+    >
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="document">
+        <button class="modal-close" aria-label="Cerrar" data-close-modal>
+          &times;
+        </button>
 
+        <h2 id="contacto-title">Contacto</h2>
+        <p>Completa el formulario y me pongo en contacto a la brevedad.</p>
+
+        <form
+          id="contact-form"
+          action="https://formsubmit.co/buscotalento.global@gmail.com"
+          method="POST"
+          novalidate
+        >
+          <!-- FormSubmit config -->
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nuevo mensaje desde el sitio GMC"
+          />
+          <input type="hidden" name="_template" value="table" />
+          <!-- opcional: redirección post-envío -->
+          <input type="hidden" name="_next" value="gracias.html?product=guia" />
+          <!-- honeypot antispam -->
+          <input type="text" name="_honey" style="display: none" />
+
+          <div class="form-grid">
+            <label>
+              <span>Nombre y apellido *</span>
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label>
+              <span>Email *</span>
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+            <label class="full">
+              <span>Mensaje *</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-cta">Enviar</button>
+            <button type="button" class="btn btn-outline" data-close-modal>
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
     <!-- Si se usa modal de contacto global, el script existente debería manejar [data-open-modal] -->
     <script src="./script.js" defer></script>
   </body>

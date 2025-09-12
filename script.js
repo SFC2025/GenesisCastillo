@@ -313,22 +313,28 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 })();
 
-// ==================== Accesos directos y mejoras ====================
+// ==================== Accesos directos (ignora enlaces de modal) ====================
 (() => {
-  // Evitar salto brusco para anclas internas (suave ya provisto por CSS, este es fallback)
   document.addEventListener("click", (e) => {
     const a = e.target.closest('a[href^="#"]');
     if (!a) return;
+
+    // No tocar si abre/cierra modales
+    if (a.hasAttribute("data-open-modal") || a.hasAttribute("data-close-modal"))
+      return;
+
     const id = a.getAttribute("href");
     if (id.length > 1) {
       const el = document.querySelector(id);
-      if (el) {
+      // Evita scrollear hacia el contenedor del modal
+      if (el && !el.classList.contains("modal")) {
         e.preventDefault();
         el.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
   });
 })();
+
 // ==================== PayPal Hosted Buttons ====================
 (function initPayPalButtons(retries = 25) {
   // Solo correr si existe el contenedor en esta página
