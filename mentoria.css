@@ -129,6 +129,12 @@
   .site-header.compact .mini-nav {
     display: none;
   }
+  .site-header.compact .mini-nav a {
+    display: block;
+  }
+}
+/* Mostrar el panel de menu en celular */
+@media (max-width: 840px) {
   .site-header.compact.is-open .mini-nav {
     display: flex;
     position: absolute;
@@ -144,9 +150,6 @@
     max-width: calc(100vw - 32px);
     width: max-content;
     z-index: 60;
-  }
-  .site-header.compact .mini-nav a {
-    display: block;
   }
 }
 
@@ -239,7 +242,6 @@ main#ebook .section > .container > .paycard,
   margin-top: 0;
 }
 
-/* Igualar hero de Mentoría al de E-book */
 #mentoria-hero {
   min-height: 73vh !important;
   padding-block-end: 0 !important;
@@ -248,18 +250,43 @@ main#ebook .section > .container > .paycard,
   padding-block: clamp(64px, 10vw, 128px);
 }
 
-/* Mismo degradé y misma superposición que E-book */
-#mentoria-hero.hero.simple::before {
-  filter: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+/* ===================================== HERO MENTORIA — overlay unico y robusto ================================================= */
+
+#mentoria-hero {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+}
+
+/* Overlay (REQUIERE content:") */
+#mentoria-hero::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
   background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.45),
-    rgba(0, 0, 0, 0.35)
-  ) !important;
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
+    180deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.25) 35%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  pointer-events: none !important;
+  z-index: 1 !important; 
+}
+
+@media (max-width: 520px) {
+  #mentoria-hero::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.45)
+    ) !important;
+  }
+}
+
+/* Texto por encima del overlay */
+#mentoria-hero .hero-center {
+  position: relative !important;
+  z-index: 2 !important;
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
 }

@@ -388,3 +388,24 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     })
     .render(sel);
 })();
+
+// Cerrar mini-nav menu al clickear fuera, al hacer click en un link, o con Escape en panel menu
+document.addEventListener("click", (e) => {
+  const header = document.querySelector(".site-header.compact");
+  if (!header) return;
+  const isOpen = header.classList.contains("is-open");
+  const insideHeader = e.target.closest(".site-header.compact");
+  if (isOpen && !insideHeader) header.classList.remove("is-open");
+});
+
+document.querySelector("#mini-nav")?.addEventListener("click", (e) => {
+  if (e.target.closest("a")) {
+    document.querySelector(".site-header.compact")?.classList.remove("is-open");
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    document.querySelector(".site-header.compact")?.classList.remove("is-open");
+  }
+});
