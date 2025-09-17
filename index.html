@@ -735,7 +735,7 @@
         <p>Completa el formulario y me pongo en contacto a la brevedad.</p>
         <form
           id="contact-form"
-          action="https://formsubmit.co/buscotalento.global@gmail.com"
+          action="https://formsubmit.co/ajax/buscotalento.global@gmail.com"
           method="POST"
           novalidate
         >
@@ -747,6 +747,15 @@
             value="Nuevo mensaje desde el sitio GMC"
           />
           <input type="hidden" name="_template" value="table" />
+          <input
+            type="text"
+            name="_honey"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+            style="position: absolute; left: -9999px; opacity: 0"
+          />
+
           <div class="form-grid">
             <label>
               <span>Nombre y apellido *</span>
@@ -1135,6 +1144,57 @@
         document.body.appendChild(div);
         document.getElementById("toastClose").onclick = () => div.remove();
         setTimeout(() => div.remove(), 7000);
+      })();
+    </script>
+    <script>
+      (function () {
+        const form = document.getElementById("contact-form");
+        if (!form) return;
+
+        function toast(msg, ok = true) {
+          const div = document.createElement("div");
+          div.setAttribute("role", "status");
+          div.style.cssText =
+            "position:fixed;left:1rem;right:1rem;bottom:1rem;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px 16px;box-shadow:0 10px 20px rgba(0,0,0,.08);z-index:9999";
+          div.innerHTML = `
+        <strong>${ok ? "¡Listo!" : "Ups"}</strong> ${msg}
+        <button aria-label="Cerrar" style="float:right;border:0;background:transparent;font-size:16px;cursor:pointer">✕</button>
+      `;
+          div.querySelector("button").onclick = () => div.remove();
+          document.body.appendChild(div);
+          setTimeout(() => div.remove(), 6000);
+        }
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const prevTxt = submitBtn ? submitBtn.textContent : null;
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Enviando...";
+          }
+
+          try {
+            const res = await fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+              headers: { Accept: "application/json" },
+            });
+            if (res.ok) {
+              form.reset();
+              toast("Tu mensaje ha sido enviado ✅", true);
+            } else {
+              toast("Hubo un error al enviar. Probá de nuevo.", false);
+            }
+          } catch (err) {
+            toast("Error de conexión. Reintentá en unos segundos.", false);
+          } finally {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = prevTxt;
+            }
+          }
+        });
       })();
     </script>
   </body>
