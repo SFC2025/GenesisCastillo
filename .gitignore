@@ -1,0 +1,66 @@
+# SO / sistema
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# Editores / herramientas
+.vscode/
+.idea/
+.history/
+
+# Node / npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Builds / cachés
+dist/
+build/
+.cache/
+.parcel-cache/
+.turbo/
+coverage/
+.eslintcache
+
+# Plataformas de deploy 
+.vercel/
+.netlify/
+
+# Entornos / configuración 
+.env*
+!.env.example
+
+# Archivos privados del proyecto
+/Guia*.pdf
+/privado/**
+
+# Temporales
+*.tmp
+*.swp
+*.swo
+
+.git_backup/
+
+# Archivos de sistema Linux
+*~
+
+# Logs adicionales
+*.log
+
+# Archivos de salida temporales de VSCode / Live Server
+*.local
+*.bak
+
+# Archivos ZIP o exportados
+*.zip
+*.rar
+*.7z
+
+# Imágenes temporales de diseño
+*.psd
+*.xcf
+
+config/config.js

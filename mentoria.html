@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es-AR" data-theme="turquesa">
+  <head>
+    <!-- PayPal SDK (Hosted Buttons) -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mentoría 1:1 — Genesis Martinez Castillo</title>
+    <meta
+      name="description"
+      content="Sesión personalizada de 1 hora para trazar tu plan de acción y empezar a generar resultados desde casa."
+    />
+
+    <link rel="icon" href="./imagenes/GMC.png" type="image/png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mentoria.css" />
+  </head>
+
+  <body class="mentoria-page">
+    <!-- ===== Header ===== -->
+    <header class="site-header compact" role="banner">
+      <div class="container header-inner">
+        <a href="index.html#inicio" class="brand" aria-label="Volver al inicio">
+          <img src="./imagenes/GMC.png" alt="GMC" width="36" height="36" />
+          <span class="brand-text">Genesis Martinez Castillo</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          aria-label="Abrir menú"
+          aria-controls="mini-nav"
+          aria-expanded="false"
+          onclick="document.querySelector('.site-header').classList.toggle('is-open')"
+        >
+          <span class="nav-bar"></span>
+          <span class="nav-bar"></span>
+          <span class="nav-bar"></span>
+        </button>
+
+        <ul id="mini-nav" class="mini-nav" role="menu">
+          <li><a href="index.html#inicio" role="menuitem">Inicio</a></li>
+          <li><a href="index.html#productos" role="menuitem">Productos</a></li>
+          <li>
+            <a href="#contacto" data-open-modal role="menuitem">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section
+      id="mentoria-hero"
+      class="hero simple hero-cover"
+      style="
+        background: url('./imagenes/mentoria-hero.jpg') center/cover no-repeat;
+      "
+      aria-label="Mentoría 1 a 1"
+    >
+      <div class="container hero-center">
+        <h1>Mentoría 1&nbsp;:&nbsp;1</h1>
+        <p class="sub">
+          Sesión personalizada de <strong>1 hora</strong> para trazar tu plan de
+          acción y empezar a generar resultados desde casa.
+        </p>
+
+        <div class="cta-row">
+          <a href="#pago" class="btn cta">RESERVA TU SESIÓN 1 A 1</a>
+        </div>
+      </div>
+    </section>
+
+    <main id="mentoria">
+      <!-- ===== Beneficios ===== -->
+      <section class="section">
+        <div class="container narrow">
+          <p class="intro">
+            En esta sesión trabajamos mano a mano sobre tu situación actual para
+            que salgas con un plan claro y accionable.
+          </p>
+
+          <h2>Incluye</h2>
+          <ul class="bullets checks">
+            <li>Sesión 1 a 1 (1 hora)</li>
+            <li>Guía completa “Acceso al Trabajo Remoto desde Cero”</li>
+            <li>Acceso de por vida a la comunidad privada en Telegram</li>
+            <li>Plantilla profesional de CV lista para usar</li>
+            <li>
+              Evaluación completa de tu perfil de LinkedIn con recomendaciones
+            </li>
+          </ul>
+
+          <h3 style="margin-top: 1.25rem">Ideal para</h3>
+          <p class="intro">
+            Personas que quieren iniciar o mejorar su carrera remota con
+            acompañamiento personalizado, recursos profesionales y un plan claro
+            para conseguir resultados reales.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== Pago / CTA ===== -->
+      <section id="pago" class="section">
+        <div class="container narrow">
+          <div class="paycard">
+            <div class="paycard-text">
+              <h3 style="margin: 0">Reserva tu sesión</h3>
+              <p class="muted" style="margin: 0.25rem 0 0.75rem">
+                Precio: <strong>USD 50</strong> (pago único)
+              </p>
+              <p class="muted small">
+                Al finalizar el pago, recibirás un correo para coordinar día y
+                horario.
+              </p>
+              <h4 class="product-name">Mentoría 1 a 1 con Genesis Martinez</h4>
+            </div>
+
+            <!-- Contenedor del botón hospedado -->
+            <div id="paypal-container-Y5697J7ZKWU32"></div>
+          </div>
+        </div>
+
+        <!-- Render del Hosted Button -->
+      </section>
+    </main>
+
+    <!-- ===== Footer  ===== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img
+            src="./imagenes/GMC.png"
+            alt="GMC"
+            width="32"
+            height="32"
+            loading="lazy"
+          />
+          <span>Genesis Martinez Castillo</span>
+        </div>
+        <ul class="footer-links social" aria-label="Enlaces de contacto">
+          <li>
+            <!-- abre el modal -->
+            <a
+              href="#contacto"
+              data-open-modal
+              aria-label="Abrir formulario de contacto"
+            >
+              <img
+                src="./imagenes/correo.png"
+                alt=""
+                width="22"
+                height="22"
+                loading="lazy"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/genesis-martinez-castillo-ba123a257/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <img
+                src="./imagenes/linkedin.png"
+                alt=""
+                width="22"
+                height="22"
+                loading="lazy"
+              />
+            </a>
+          </li>
+        </ul>
+
+        <small class="copy"
+          >© <span id="year"></span> GMC. Hecho con foco y propósito.</small
+        >
+      </div>
+    </footer>
+    <!-- MODAL CONTACTO (FormSubmit) -->
+    <div
+      class="modal"
+      id="contacto"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contacto-title"
+      aria-hidden="true"
+    >
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="document">
+        <button class="modal-close" aria-label="Cerrar" data-close-modal>
+          &times;
+        </button>
+
+        <h2 id="contacto-title">Contacto</h2>
+        <p>Completa el formulario y me pongo en contacto a la brevedad.</p>
+
+        <form
+          id="contact-form"
+          action="https://formsubmit.co/buscotalento.global@gmail.com"
+          method="POST"
+          novalidate
+        >
+          <!-- FormSubmit config -->
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nuevo mensaje desde el sitio GMC"
+          />
+          <input type="hidden" name="_template" value="table" />
+          <!-- opcional: redirección post-envío -->
+          <input
+            type="hidden"
+            name="_next"
+            value="gracias.html?product=mentoria"
+          />
+          <!-- honeypot antispam -->
+          <input type="text" name="_honey" style="display: none" />
+
+          <div class="form-grid">
+            <label>
+              <span>Nombre y apellido *</span>
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label>
+              <span>Email *</span>
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+            <label class="full">
+              <span>Mensaje *</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-cta">Enviar</button>
+            <button type="button" class="btn btn-outline" data-close-modal>
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Config pública (COMMIT) -->
+    <script src="config/config.public.js"></script>
+    <!-- Si se usa modal de contacto global, el script existente debe manejar [data-open-modal] -->
+    <script src="config/config.js"></script>
+    <!-- JS principal que hace todo (PayPal, Sheets, etc.) -->
+    <script src="./script.js" defer></script>
+    <script>
+      (() => {
+        // CSV público del Google Sheets
+        const SHEET_CSV =
+          "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwQpIYXwrWnWoiT4rYJ_e3EwPT3NTfm7cT_0m8mH6Jcsv8Qj19N77iCuvEb0D45B38kQoqiCms3UgX/pub?gid=581698402&single=true&output=csv";
+
+        // Mapa key -> elemento del DOM (no se toca HTML)
+        const map = {
+          // HERO
+          m_hero_title: () => document.querySelector("#mentoria-hero h1"),
+          m_hero_sub: () => document.querySelector("#mentoria-hero .sub"),
+          m_cta_primary: () =>
+            document.querySelector("#mentoria-hero .cta-row a"),
+
+          // BENEFICIOS
+          m_intro: () =>
+            document.querySelectorAll("#mentoria .section .intro")[0],
+          m_incluye_title: () =>
+            document.querySelector("#mentoria .section h2"),
+          m_inc_1: () =>
+            document.querySelector("#mentoria .bullets.checks li:nth-child(1)"),
+          m_inc_2: () =>
+            document.querySelector("#mentoria .bullets.checks li:nth-child(2)"),
+          m_inc_3: () =>
+            document.querySelector("#mentoria .bullets.checks li:nth-child(3)"),
+          m_inc_4: () =>
+            document.querySelector("#mentoria .bullets.checks li:nth-child(4)"),
+          m_inc_5: () =>
+            document.querySelector("#mentoria .bullets.checks li:nth-child(5)"),
+          m_ideal_title: () =>
+            document.querySelectorAll("#mentoria .section h3")[0],
+          m_ideal_text: () =>
+            document.querySelectorAll("#mentoria .section .intro")[1],
+
+          // PAGO / CTA
+          m_pay_title: () => document.querySelector("#pago .paycard-text h3"),
+          m_pay_price_label: () =>
+            document.querySelector("#pago .paycard-text .muted:nth-of-type(1)"),
+          m_pay_note: () =>
+            document.querySelector("#pago .paycard-text .muted.small"),
+          m_product_name: () =>
+            document.querySelector("#pago .paycard .product-name"),
+        };
+
+        // Permití HTML solo donde se necesita (para poder usar <strong> en m_hero_sub)
+        const allowHtml = new Set(["m_hero_sub"]);
+
+        function setContent(el, value, key) {
+          if (!el || value == null || value === "") return;
+          if (allowHtml.has(key)) el.innerHTML = value;
+          else el.textContent = value;
+        }
+
+        // Parser CSV "key,value" (toma todo lo que viene después de la primera coma como value)
+        function parseCSV(text) {
+          const lines = text.split(/\r?\n/).filter(Boolean);
+          const kv = {};
+          for (const line of lines) {
+            const i = line.indexOf(",");
+            if (i === -1) continue;
+            const key = line.slice(0, i).trim();
+            let val = line.slice(i + 1).trim();
+            // Si empieza y termina con comillas, las saco
+            if (val.startsWith('"') && val.endsWith('"')) {
+              val = val.slice(1, -1);
+            }
+            if (key) kv[key] = val;
+          }
+          return kv;
+        }
+
+        function applyKV(kv) {
+          Object.keys(map).forEach((k) => {
+            const el = map[k] && map[k]();
+            setContent(el, kv[k], k);
+          });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          // Corre solo en mentoria.html
+          const isMentoria = document.body.classList.contains("mentoria-page");
+          if (!isMentoria) return;
+
+          fetch(SHEET_CSV)
+            .then((r) => r.text())
+            .then(parseCSV)
+            .then(applyKV)
+            .catch((e) => console.error("Error cargando Sheet:", e));
+        });
+      })();
+    </script>
+  </body>
+</html>

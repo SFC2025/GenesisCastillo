@@ -1,0 +1,680 @@
+.blog-hero.hero-cover {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 58vh;
+  padding-block: clamp(40px, 6vw, 72px);
+  text-align: center;
+  background: url("./imagenes/genesis16.jpg") center/cover no-repeat;
+}
+.blog-hero.hero-cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 10, 40, 0.36),
+    rgba(0, 0, 0, 0.3)
+  );
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.blog-hero.hero-cover .container {
+  position: relative;
+  z-index: 1;
+  max-width: 920px;
+  padding-inline: clamp(16px, 3vw, 32px);
+}
+.blog-hero.hero-cover h1 {
+  color: #fff;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+  font-size: clamp(2.6rem, 3.8vw + 1rem, 4rem);
+  line-height: 1.08;
+  margin: 0 0 0.6rem;
+}
+.blog-hero.hero-cover p {
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  font-size: clamp(1.1rem, 0.9vw + 1rem, 1.35rem);
+  max-width: 62ch;
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .blog-hero.hero-cover {
+    min-height: 48vh;
+    padding-block: 2.6rem;
+  }
+}
+
+/* Variante sin cover*/
+.blog-hero:not(.hero-cover) {
+  display: grid;
+  place-items: center;
+  min-height: 40vh;
+  padding-block: 3.2rem 2rem;
+  text-align: center;
+  background: transparent;
+}
+.blog-hero:not(.hero-cover) .container {
+  max-width: 820px;
+}
+.blog-hero:not(.hero-cover) h1 {
+  font-size: clamp(2rem, 2.6vw + 1rem, 2.8rem);
+  line-height: 1.1;
+  margin: 0 0 0.6rem;
+  color: var(--color-primary);
+}
+.blog-hero:not(.hero-cover) p {
+  color: var(--color-text-2);
+  max-width: 60ch;
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .blog-hero:not(.hero-cover) {
+    min-height: 32vh;
+    padding-block: 2.2rem 1.2rem;
+  }
+}
+
+/* Contenedores comunes */
+#blog .container,
+.blog-list .container,
+.blog-page #blog .container {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 3vw, 32px);
+}
+
+/* =========================
+   Parrilla “Últimos artículos”
+   ========================= */
+.blog-page .posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+@media (max-width: 1100px) {
+  .blog-page .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.blog-page .post-card {
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+  border: 1px solid #e2e8f0;
+  border-radius: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.blog-page .post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-2);
+}
+
+/* imágenes estables (4/3) */
+.post-card img,
+.blog-page .post-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0.85rem;
+}
+.post-card h3,
+.blog-page .post-card h3 {
+  text-align: center;
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+.post-card p,
+.blog-page .post-card p {
+  color: var(--color-text-2);
+}
+.post-card .pc-actions,
+.blog-page .post-card .pc-actions {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* =========================
+   Página de artículo (tipos)
+   ========================= */
+.post .container > article {
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 3vw, 32px);
+}
+.post header h2 {
+  font-size: clamp(1.35rem, 2vw + 1rem, 2rem);
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+  color: var(--color-primary);
+}
+.post header figure {
+  margin: 12px 0 20px;
+}
+.post header figure img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-1);
+
+  /* Nuevo: recorte responsable en móvil */
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  max-height: 60vh;
+}
+
+/* Phones muy chicos: un poco más alto (4:3) */
+@media (max-width: 420px) {
+  .post header figure img {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.post p {
+  line-height: 1.75;
+  margin: 0 0 1rem;
+  color: var(--color-text);
+}
+.post h3 {
+  margin: 1.2rem 0 0.5rem;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+.post ul {
+  margin: 0.5rem 0 1.25rem 1.25rem;
+  padding: 0;
+  color: var(--color-text-2);
+}
+.post li {
+  margin: 0.25rem 0;
+}
+.post a {
+  color: var(--color-cta);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.post a:hover {
+  text-decoration-thickness: 2px;
+  color: var(--brand-700, var(--color-cta));
+}
+@media (max-width: 640px) {
+  .post header figure {
+    margin: 10px 0 16px;
+  }
+}
+
+/* =========================
+   CTA reutilizable
+   ========================= */
+:root {
+  --cta-outline: var(--brand-300, #93c5fd);
+}
+.blog-cta {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  padding: 14px 18px;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease,
+    background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.blog-cta--outline {
+  background: #fff;
+  color: var(--color-cta);
+  border: 2px solid var(--cta-outline);
+  box-shadow: none;
+}
+.blog-cta--outline:hover {
+  background: var(--color-cta);
+  color: #fff;
+  border-color: var(--color-cta);
+  filter: brightness(0.98);
+}
+@media (max-width: 700px) {
+  .blog-cta {
+    padding: 12px 16px;
+    border-radius: var(--radius-xl);
+  }
+}
+
+/* =========================
+   Sección: Top 5 plataformas
+   ========================= */
+.blog-page section[aria-labelledby="t1-title"] .container {
+  --text-w: min(1040px, 100%);
+  max-width: var(--maxw);
+  padding-inline: clamp(8px, 2vw, 16px);
+  margin-inline: auto;
+}
+
+/* Título, párrafo y extra con el mismo ancho */
+.blog-page section[aria-labelledby="t1-title"] .container > h2,
+.blog-page section[aria-labelledby="t1-title"] .container > p,
+.blog-page section[aria-labelledby="t1-title"] .promo .sub {
+  max-width: var(--text-w);
+  margin-inline: auto;
+}
+
+/* GRID simple y fluido */
+.blog-page .top5-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(5, minmax(180px, 1fr));
+  max-width: var(--text-w);
+  margin-inline: auto;
+}
+.blog-page .top5-card {
+  width: auto;
+  box-sizing: border-box;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 0.125rem;
+  display: flex;
+  flex-direction: column;
+}
+.blog-page .top5-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+.blog-page .top5-card figcaption {
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: var(--color-text-2);
+  padding: 0.45rem 0.3rem 0.55rem;
+}
+
+/* Breakpoints Top 5 (columnas) */
+@media (max-width: 1200px) {
+  .blog-page .top5-grid {
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .blog-page .top5-grid {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .blog-page .top5-grid {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+  /* última card a lo ancho + foto apaisada */
+  .blog-page .top5-card:last-child {
+    grid-column: 1 / -1;
+  }
+  .blog-page .top5-card:last-child img {
+    aspect-ratio: 16 / 9;
+  }
+}
+@media (max-width: 420px) {
+  .blog-page .top5-grid {
+    grid-template-columns: 1fr;
+  }
+  .blog-page .top5-card figcaption {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================
+   Sección: La libertad de viajar…
+   (4 fotos altas con marco + leyendas)
+   ========================= */
+.blog-page section[aria-labelledby="t2-title"] .grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.35rem;
+  align-items: start;
+}
+
+/* Card */
+.blog-page section[aria-labelledby="t2-title"] .grid-4 .travel-card {
+  margin: 0;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 0.125rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Imagen */
+.blog-page section[aria-labelledby="t2-title"] .grid-4 .travel-card img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  border: 0;
+  background: #fff;
+  flex: 0 0 auto;
+}
+
+/* Epígrafe */
+.blog-page section[aria-labelledby="t2-title"] .grid-4 .travel-card figcaption {
+  text-align: center;
+  color: var(--color-text-2);
+  padding: 0.45rem 0.35rem 0.55rem;
+  font-size: 0.95rem;
+  line-height: 1.35;
+
+  /* <- NUEVO: misma altura para todos los piecitos */
+  --capH: 140px; /* desktop */
+  min-height: var(--capH);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-content: start;
+}
+
+.blog-page section[aria-labelledby="t2-title"] .grid-4 .travel-card .title {
+  display: block;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+/* Breakpoints viaje (sin cambios de tamaños) */
+@media (max-width: 900px) {
+  .blog-page section[aria-labelledby="t2-title"] .grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .blog-page section[aria-labelledby="t2-title"] .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Celular: 2x2 */
+@media (max-width: 520px) {
+  .blog-page section[aria-labelledby="t2-title"] .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*Para micro-celulares*/
+@media (max-width: 360px) {
+  .blog-page section[aria-labelledby="t2-title"] .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+/* Breakpoints Top 5 (columnas) */
+@media (max-width: 1200px) {
+  .blog-page .top5-grid {
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .blog-page .top5-grid {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  /* 2 columnas para las primeras 4 cards */
+  .blog-page .top5-grid {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+
+  /* la ÚLTIMA card ocupa las 2 columnas (ancho completo) */
+  .blog-page .top5-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  /* Ultima foto apaisada - por fotos impares */
+  .blog-page .top5-card:last-child img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 420px) {
+  .blog-page .top5-grid {
+    grid-template-columns: 1fr;
+  }
+  .blog-page .top5-card figcaption {
+    font-size: 0.9rem;
+  }
+}
+
+/* Últimos artículos: compacto en phones muy chicos */
+@media (max-width: 380px) {
+  .blog-page .posts-grid {
+    gap: 0.75rem;
+  }
+  .blog-page .post-card {
+    padding: 0.75rem;
+  }
+}
+
+/* Viajar: tipografía y gap en phones */
+@media (max-width: 420px) {
+  .blog-page section[aria-labelledby="t2-title"] .grid-4 {
+    gap: 0.25rem;
+  }
+  .blog-page
+    section[aria-labelledby="t2-title"]
+    .grid-4
+    .travel-card
+    figcaption {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 900px) {
+  .blog-page
+    section[aria-labelledby="t2-title"]
+    .grid-4
+    .travel-card
+    figcaption {
+    --capH: 130px;
+  }
+}
+@media (max-width: 700px) {
+  .blog-page
+    section[aria-labelledby="t2-title"]
+    .grid-4
+    .travel-card
+    figcaption {
+    --capH: 120px;
+  }
+}
+@media (max-width: 520px) {
+  .blog-page
+    section[aria-labelledby="t2-title"]
+    .grid-4
+    .travel-card
+    figcaption {
+    --capH: 110px;
+  }
+}
+
+/* Seguridad desborde de imágenes*/
+.blog-page img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Footer del blog: solo ajustes en mobile --- */
+@media (max-width: 520px) {
+  /* separa un poco el último bloque antes del footer */
+  .blog-page .section:last-of-type {
+    padding-bottom: 0.75rem;
+  }
+
+  /* más aire en el pie solo en phones */
+  .blog-page .site-footer {
+    padding-block: 14px 18px;
+  }
+
+  .blog-page .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 0.5rem;
+    text-align: center;
+  }
+  .blog-page .footer-links {
+    display: flex;
+    gap: 0.5rem 1rem;
+    flex-wrap: wrap;
+    margin: 0.25rem 0 0.35rem;
+    padding: 0;
+    list-style: none;
+  }
+  .blog-page .footer-links a {
+    display: inline-block;
+    padding: 0.35rem 0.5rem; /* área táctil */
+  }
+  .blog-page .copy {
+    display: block;
+    margin-top: 0.25rem;
+  }
+}
+
+/* Últimos artículos (mobile): patrón 2 chicas + 1 grande */
+@media (max-width: 700px) {
+  .blog-page .posts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columnas */
+  }
+
+  /* Cada 3ra card ocupa todo el ancho (1/-1) => grande */
+  .blog-page .post-card:nth-child(3n) {
+    grid-column: 1 / -1;
+  }
+
+  /* La foto grande como foto apaisada */
+  .blog-page .post-card:nth-child(3n) img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+}
+
+/* Teléfonos MUY chicos: vuelve a 1 columna */
+@media (max-width: 380px) {
+  .blog-page .posts-grid {
+    grid-template-columns: 1fr;
+  }
+  .blog-page .post-card:nth-child(3n) img {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* --- Fuerzo tipografía + espaciado solo en "Top 5" --- */
+.blog-page section[aria-labelledby="t1-title"] > .container > #t1-title {
+  font-size: clamp(1.55rem, 3.2vw + 0.8rem, 2.2rem) !important;
+  line-height: 1.15 !important;
+  margin: 0 0 0.6rem !important;
+}
+
+.blog-page section[aria-labelledby="t1-title"] > .container > p {
+  font-size: clamp(1rem, 0.5vw + 0.95rem, 1.1rem) !important;
+  line-height: 1.55 !important;
+  margin-bottom: 0.85rem !important;
+
+  /* igualar ancho al del título */
+  max-width: var(--text-w) !important;
+  margin-inline: auto;
+}
+
+/* Reduzco padding vertical de ESA sección */
+.blog-page section[aria-labelledby="t1-title"].section {
+  padding-block: 18px 14px !important;
+}
+
+/* Ajustes específicos en móviles */
+@media (max-width: 640px) {
+  .blog-page .top5-grid {
+    gap: 0.6rem !important;
+  }
+
+  /* Si hay 1 columna (celulares angostos), usar 16:9 para que no queden altos */
+  .blog-page .top5-card img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .blog-page section[aria-labelledby="t1-title"] > .container > #t1-title {
+    font-size: 1.4rem !important;
+  }
+  .blog-page section[aria-labelledby="t1-title"] > .container > p {
+    font-size: 0.98rem !important;
+  }
+}
+
+.blog-page .top5-card figcaption a[href*="trello.com"] {
+  color: #026aa7;
+}
+.blog-page .top5-card figcaption a[href*="monday.com"] {
+  color: #1976d2;
+}
+.blog-page .top5-card figcaption a[href*="clickup.com"] {
+  color: #7b68ee;
+}
+.blog-page .top5-card figcaption a[href*="asana.com"] {
+  color: #f06a6a;
+}
+.blog-page .top5-card figcaption a[href*="notion.so"] {
+  color: #111;
+}
+
+/*/* Agrego galería de (solo imágenes) */
+#galeria1 .grid-4 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.35rem;
+  align-items: start;
+}
+
+/* Card */
+#galeria1 .grid-4 .travel-card {
+  margin: 0;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 0.125rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Imagen */
+#galeria1 .grid-4 .travel-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ocultar epígrafe (no usamos texto) */
+#galeria1 .grid-4 .travel-card figcaption {
+  display: none;
+}
+
+/* Breakpoints */
+@media (max-width: 1100px) {
+  #galeria1 .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  #galeria1 .grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  #galeria1 .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

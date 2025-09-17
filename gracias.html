@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es-AR" data-theme="turquesa">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow"> <!-- evitar indexación -->
+    <title>¡Gracias por tu compra!</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      /* Contenedor general */
+      .gracias {
+        min-height: 70vh;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+      }
+
+      /* Tarjeta */
+      .panel {
+        max-width: 720px;
+        width: min(100%, 720px);
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        padding: 1.75rem;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+      }
+      .panel:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Titulares y textos */
+      .panel h1 {
+        margin: 0 0 0.5rem;
+        font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+      }
+      .panel h2 {
+        margin: 1rem 0 0.25rem;
+        font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+        line-height: 1.3;
+      }
+
+      .sub {
+        color: var(--color-text-2);
+        margin: 0 0 1rem;
+        line-height: 1.55;
+      }
+      .help {
+        font-size: 0.95rem;
+        color: var(--color-text-2);
+        line-height: 1.55;
+        margin: 0.5rem 0;
+      }
+
+      /* Lista de instrucciones */
+      .panel ul {
+        margin: 0.75rem 0 1rem;
+        padding-left: 1.15rem;
+      }
+      .panel li {
+        margin: 0.4rem 0;
+      }
+
+      /* Bloque dinámico post-pago */
+      .postpay {
+        margin-top: 1rem;
+      }
+      .postpay p {
+        margin: 0.5rem 0;
+      }
+
+      /* Botones */
+      .panel .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.15rem;
+        border-radius: 9999px; /* pill */
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.12s ease, box-shadow 0.12s ease,
+          opacity 0.12s ease;
+        will-change: transform;
+      }
+      .panel .btn-cta {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+      .panel .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      }
+      .panel .btn:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Enlace “Volver al inicio” separado del bloque dinámico */
+      .panel > p:last-child {
+        margin-top: 1.25rem;
+      }
+
+      /* Accesibilidad: foco visible y código */
+      .panel a:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 3px;
+        border-radius: 10px;
+      }
+      code {
+        background: #f4f6f8;
+        border: 1px solid #e5e7eb;
+        padding: 0.1rem 0.35rem;
+        border-radius: 6px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas,
+          "Liberation Mono", monospace;
+        font-size: 0.9em;
+      }
+
+      /* Ajustes responsivos */
+      @media (max-width: 520px) {
+        .gracias {
+          padding: 1.25rem;
+        }
+        .panel {
+          padding: 1.25rem;
+          border-radius: 14px;
+        }
+        .panel .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="gracias">
+      <section class="panel">
+        <h1>¡Gracias por tu compra! 🎉</h1>
+        <p id="sub" class="sub"></p>
+
+        <p class="help">
+          ¿No te llegó? Escribenos a
+          <a href="mailto:buscotalento.global@gmail.com"
+            >buscotalento.global@gmail.com</a
+          >
+          con tu <em>ID de transacción</em> de PayPal.
+        </p>
+
+        <!-- bloque que se completa según ?product= -->
+        <div id="postpay" class="postpay" style="margin-top: 1rem"></div>
+
+        <!-- Dejo el volver al inicio debajo -->
+        <p><a class="btn btn-outline" href="index.html">Volver al inicio</a></p>
+      </section>
+    </main>
+
+    <!-- Script que completa el bloque post-pago según ?product= -->
+    <script>
+      (function () {
+        const qs = new URLSearchParams(location.search);
+        const product = (qs.get("product") || "").toLowerCase();
+
+        // NUEVO: parámetros que llegan desde el redirect de Calendly
+        const scheduled = qs.get("scheduled") === "1";
+        const inviteeEmail = qs.get("invitee_email") || "";
+
+        const box = document.getElementById("postpay");
+        const subEl = document.getElementById("sub");
+        function setSub(t) {
+          if (subEl) subEl.textContent = t;
+        }
+
+        // Subtítulo según producto (ajustar los textos)
+        if (product === "mentoria") {
+          setSub(
+            "Sigue el siguiente paso: te llevará a un calendario para agendar tu mentoría."
+          );
+        } else if (product === "guia") {
+          setSub(
+            "Pago confirmado ✅. Tu contenido está disponible aquí mismo. No se envían correos ni contraseñas."
+          );
+        } else if (product === "suscripcion") {
+          setSub(
+            "Pago confirmado ✅. Tu acceso está disponible a continuación."
+          );
+        } else {
+          setSub("Pago confirmado ✅.");
+        }
+
+        // Links y datos
+        const tgLink = "https://t.me/+TmuuvN7qXYhkY2Jh";
+        const calendlyBase =
+          "https://calendly.com/buscotalento-global/mentoria-1-1";
+
+        let html = "";
+
+        if (product === "suscripcion") {
+          const subId = qs.get("sub") || "";
+          html = `
+        <h2>¡Suscripción activa! ✅</h2>
+        ${subId ? `<p>ID de suscripción: <code>${subId}</code></p>` : ""}
+        <p>Accede al canal:</p>
+        <p><a class="btn btn-cta" href="${tgLink}" target="_blank" rel="noopener">Entrar al canal de Telegram</a></p>
+      `;
+        } else if (product === "guia") {
+          const DRIVE_ID = "1ezYFY7jV3UIwZggt9Aifn1fCrNa2W376";
+          const PASS = "";
+          html = `
+        <h2>Tu guía está lista 📘</h2>
+        <p>Puedes descargarla ahora mismo:</p>
+        <p>
+          <a class="btn btn-cta"
+             href="https://drive.google.com/uc?export=download&id=${DRIVE_ID}"
+             target="_blank" rel="noopener">
+            Descargar e-book (PDF)
+          </a>
+        </p>
+        ${
+          PASS
+            ? `<p class="help" style="margin-top:.75rem"><strong>Contraseña del PDF:</strong> ${PASS}</p>`
+            : ""
+        }
+        <p style="margin-top:1rem">Como regalo, también puedes entrar al canal:</p>
+        <p><a class="btn btn-outline" href="${tgLink}" target="_blank" rel="noopener">Entrar al canal de Telegram</a></p>
+      `;
+        } else if (product === "mentoria") {
+          // Dos estados: antes de reservar (embed) y después (retorno desde Calendly)
+          if (scheduled) {
+            html = `
+          <h2>¡Mentoría agendada! ✅</h2>
+          ${
+            inviteeEmail
+              ? `<p>Te enviamos la invitación a <strong>${inviteeEmail}</strong>.</p>`
+              : ""
+          }
+          <p class="help">Vas a ser redirigido al inicio en unos segundos…</p>
+          <p><a class="btn btn-outline" href="index.html">Ir ahora</a></p>
+        `;
+            // Auto-redirect al home a los 6s (para no molestar)
+            setTimeout(() => {
+              location.replace("index.html?booked=1");
+            }, 3000);
+          } else {
+            html = `
+          <h2>¡Pago recibido! ✅</h2>
+          <div class="calendly-inline-widget" data-url="${calendlyBase}" style="min-width:100%;height:780px;"></div>
+          <p class="fallback-calendly">
+            ¿No ves el calendario?
+            <a class="btn btn-outline" href="${calendlyBase}" target="_blank" rel="noopener">Abrir calendario en una pestaña nueva</a>
+          </p>
+          <p class="help">Si no ves horarios, escribenos a
+            <a href="mailto:buscotalento.global@gmail.com">buscotalento.global@gmail.com</a>.
+          </p>
+        `;
+          }
+        }
+
+        box.innerHTML = html;
+      })();
+    </script>
+
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      async
+    ></script>
+  </body>
+</html>

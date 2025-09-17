@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="es-AR" data-theme="turquesa">
+  <head>
+    <!-- Suscripción -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Genesis Martinez Castillo — Trabajo Remoto Desde Cero</title>
+    <meta
+      name="description"
+      content="Sitio oficial de Genesis Martinez Castillo. Trabajo remoto desde cero, recursos, guía y productos para iniciar tu carrera desde casa."
+    />
+    <link rel="icon" href="./imagenes/GMC.png" type="image/png" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Genesis Martinez Castillo" />
+    <meta
+      property="og:description"
+      content="Te enseño cómo trabajar remoto desde cero."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./imagenes/Genesis-web.JPG" />
+    <meta property="og:url" content="./" />
+
+    <!-- Tipografía (sistema + Poppins) -->
+    <link rel="preload" as="image" href="./imagenes/Genesis-web.JPG" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      /* Fallback de fuente, evitamos bloqueos si no carga remota */
+      :root {
+        --tmp-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Arial, "Poppins", sans-serif;
+      }
+    </style>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Salto de contenido -->
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="#inicio" class="brand" aria-label="Volver al inicio">
+          <img
+            src="./imagenes/GMC.png"
+            alt="GMC"
+            width="36"
+            height="36"
+            loading="eager"
+          />
+          <span class="brand-text">Genesis Martinez Castillo</span>
+        </a>
+
+        <nav class="site-nav" role="navigation" aria-label="Principal">
+          <button
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-list"
+            aria-label="Abrir menú"
+          >
+            <span class="nav-bar"></span><span class="nav-bar"></span
+            ><span class="nav-bar"></span>
+          </button>
+          <ul id="nav-list" class="nav-list">
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="blog.html">Lee mi Blog</a></li>
+            <li><a href="#galeria1">Galería</a></li>
+            <li><a href="#contacto-open" data-open-modal>Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section id="inicio" class="hero" aria-label="Portada">
+        <div class="container hero-inner" id="hero">
+          <div class="hero-media">
+            <img
+              src="./imagenes/Genesis-web.JPG"
+              alt="Retrato de Genesis Martinez Castillo"
+              width="960"
+              height="1200"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="hero-copy">
+            <h1 class="hero-title">Genesis Martinez Castillo</h1>
+            <p class="hero-sub">Reclutadora Remota &amp; Project Manager</p>
+
+            <p class="hero-lead">
+              Conecto empresas con
+              <span class="u-accent">talento de alto nivel</span> y ayudo a
+              profesionales a conseguir su primer trabajo remoto.
+              <span class="break-lg"
+                >Más de 10 años liderando equipos, procesos y proyectos en
+                diferentes industrias.</span
+              >
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn btn-cta" href="#productos">Conocé más</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCTOS / SERVICIOS -->
+      <section id="productos" class="section" aria-labelledby="servicios-title">
+        <div class="container">
+          <h2 id="servicios-title">Servicios</h2>
+
+          <div class="cards services">
+            <!-- Card 1 -->
+            <article class="card service">
+              <div class="card-media">
+                <img
+                  id="srv1-img"
+                  src="./imagenes/productoprofesionales-1.jpg"
+                  alt="Servicios para Profesionales"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3 id="srv1-title" class="card-title">Para Profesionales</h3>
+
+              <div class="card-content">
+                <p id="srv1-p">
+                  Lanza tu carrera remota: potencia tu perfil, evita los errores
+                  que frenan a la mayoría y recibe mentoría y recursos
+                  personalizados para conseguir tu primer trabajo online.
+                </p>
+                <ul class="card-list">
+                  <li id="srv1-li1">Guías y Ebooks</li>
+                  <li id="srv1-li2">Kit de Recursos Pro</li>
+                  <li id="srv1-li3">Mentoría 1:1</li>
+                  <li id="srv1-li4">Talleres Express</li>
+                </ul>
+              </div>
+
+              <div class="card-actions">
+                <a id="srv1-link" class="btn btn-cta" href="#recursos">
+                  <span id="srv1-btn">Recursos</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card service">
+              <div class="card-media">
+                <img
+                  id="srv2-img"
+                  src="./imagenes/remoto2.jpg"
+                  alt="Servicios para Empresas y Emprendedores"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3 id="srv2-title">Para Empresas y Emprendedores</h3>
+
+              <div class="card-content">
+                <p id="srv2-p">
+                  Recluta talento confiable, organiza tus proyectos y delega con
+                  nuestra Asistencia Virtual Premium.
+                </p>
+                <ul class="card-list">
+                  <li id="srv2-li1">Reclutamiento Remoto</li>
+                  <li id="srv2-li2">Gestión de Proyectos</li>
+                  <li id="srv2-li3">Asistencia Virtual Premium (TIVA)</li>
+                  <li id="srv2-li4">Consultoría en Delegación</li>
+                </ul>
+              </div>
+
+              <div class="card-actions">
+                <a
+                  id="srv2-link"
+                  class="btn btn-outline"
+                  href="https://calendly.com/buscotalento-global/mentoria-1-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span id="srv2-btn">Agendar</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card service">
+              <div class="card-media">
+                <img
+                  id="srv3-img"
+                  src="./imagenes/genesis16.jpg"
+                  alt="Servicios Especiales"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3 id="srv3-title">Servicios Especiales</h3>
+
+              <div class="card-content">
+                <p id="srv3-p">
+                  Impulsa tu equipo remoto con capacitaciones, outplacement y
+                  consultoría en políticas de teletrabajo.
+                </p>
+                <ul class="card-list">
+                  <li id="srv3-li1">Capacitación Empresarial</li>
+                  <li id="srv3-li2">Outplacement Remoto</li>
+                  <li id="srv3-li3">Consultoría RRHH Remoto</li>
+                </ul>
+              </div>
+
+              <div class="card-actions">
+                <a
+                  id="srv3-link"
+                  class="btn btn-outline"
+                  href="https://calendly.com/buscotalento-global/mentoria-1-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span id="srv3-btn">Agendar</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Mini-CTA: recursos + Telegram -->
+      <div class="promo telegram-cta" aria-labelledby="tg-title">
+        <div class="container promo-inner">
+          <div class="promo-copy">
+            <h3 id="tg-title">
+              💎 Acceso Élite <span class="price">– Solo $2.97/mes</span>
+            </h3>
+
+            <h4 class="tg-channel">Canal de Telegram</h4>
+
+            <p class="sub">
+              Prueba <strong>gratis por 7 días</strong> y accede a todo lo que
+              necesitas para impulsar tu carrera remota:
+            </p>
+
+            <ul>
+              <li>✔ Vacantes remotas actualizadas cada semana.</li>
+              <li>✔ Consejos prácticos para mejorar tu perfil de LinkedIn.</li>
+              <li>
+                ✔ Novedades sobre herramientas y recursos para trabajo remoto.
+              </li>
+            </ul>
+          </div>
+
+          <div class="promo-actions">
+            <div id="paypal-button-container-P-6SV06465S5864740NNDAHZ6Y"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOBRE MÍ -->
+      <section id="sobre" class="section alt" aria-labelledby="sobre-title">
+        <div class="container narrow">
+          <h2 id="sobre-title">Sobre mí</h2>
+
+          <p>
+            Soy Genesis Martínez Castillo, dominicana, con más de 10 años de
+            experiencia en reclutamiento, operaciones y gestión de equipos en
+            sectores como ventas, telecomunicaciones y finanzas. Empecé a
+            trabajar a los 12 años y he escalado hasta posiciones directivas en
+            empresas internacionales.
+          </p>
+          <p>
+            Hoy acompaño a profesionales a iniciar o fortalecer su camino en el
+            trabajo remoto, y a empresas a delegar sin miedo. Mi propósito es
+            ayudarte a tener claridad, estrategia y resultados concretos, porque
+            sé lo que significa reinventarse y construir una vida flexible sin
+            perder ingresos ni estabilidad.
+          </p>
+
+          <ul class="about-bullets">
+            <li>10+ años en reclutamiento y operaciones.</li>
+            <li>Experiencia en dirección de equipos y procesos.</li>
+            <li>Asesora a empresas y profesionales en remoto.</li>
+            <li>Fundadora de TIVA, agencia de asistentes virtuales.</li>
+          </ul>
+
+          <!-- Plegable: sin JS -->
+          <!-- Botón que abre el modal -->
+          <a href="#sobre-modal" class="btn btn-outline" data-open-modal>
+            Conoce más de mi historia
+          </a>
+
+          <!-- Modal mini -->
+          <div
+            id="sobre-modal"
+            class="modal"
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="sobre-modal-title"
+          >
+            <div class="modal-backdrop" data-close-modal></div>
+            <div class="modal-dialog modal--narrow">
+              <button
+                class="modal-close"
+                aria-label="Cerrar"
+                data-close-modal
+              ></button>
+
+              <h3 id="sobre-modal-title">Mi historia</h3>
+              <div class="modal-body">
+                <p>
+                  Comencé a trabajar a los 12 años para comprar mis útiles
+                  escolares y pasé por ventas, supermercados,
+                  telecomunicaciones, finanzas y más. A los 26 años, ya era
+                  Directora de Operaciones, liderando a más de 150 personas en
+                  una industria dominada por hombres. Tenía un buen puesto, pero
+                  por dentro me sentía agotada, vacía y desconectada de mí
+                  misma.
+                </p>
+                <p>
+                  Todo cambió cuando descubrí el trabajo remoto. Aprendí que
+                  podía trabajar desde casa, ganar en dólares y euros, cuidar a
+                  mi hija y disfrutar de su crecimiento sin sacrificar mi
+                  carrera. Hoy vivo completamente del trabajo remoto y ayudo a
+                  otras personas a lograr lo mismo: crear ingresos desde
+                  cualquier lugar del mundo, sin perder su vida personal.
+                </p>
+                <p>
+                  Mi misión es enseñarte cómo trabajar remoto desde cero,
+                  construir independencia financiera y encontrar un equilibrio
+                  real entre tu carrera y tu vida personal. No hay fórmulas
+                  mágicas, pero sí un camino claro y probado que puedes seguir.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="recursos" class="section" aria-labelledby="recursos-title">
+        <div class="container">
+          <h2 id="recursos-title">Recursos</h2>
+
+          <ul class="resource-list">
+            <li class="resource-item">
+              <h3>Guía de Trabajo Remoto Desde Cero</h3>
+              <p>Cómo empezar tu carrera desde casa.</p>
+              <a class="btn btn-cta" href="ebook.html">Ver guía</a>
+            </li>
+
+            <li class="resource-item">
+              <h3>Mentoría 1:1</h3>
+              <p>
+                Acompañamiento personalizado para optimizar perfil y aplicar
+                mejor.
+              </p>
+              <a class="btn btn-outline" href="mentoria.html"
+                >Agendar mentoría</a
+              >
+            </li>
+
+            <li class="resource-item">
+              <h3>Plantilla de CV (Gratis)</h3>
+              <p>
+                Descarga mi plantilla de CV remoto + guía de relleno, optimizada
+                para pasar filtros ATS. Lista para personalizar y mejorar tus
+                oportunidades de trabajo remoto.
+              </p>
+
+              <!-- CTA pedido por la clienta -->
+              <a
+                class="btn"
+                href="https://docs.google.com/document/d/13iOrBKOQtmcu9bekWGZ4pxgNaQdD73VAZb-yCsQ0Vak/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Descargar Gratis
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- BLOG SLIDER -->
+      <section id="blog" class="section" aria-labelledby="blog-title">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="blog-title">Lee mi Blog</h2>
+            <p class="section-desc">
+              Historias, ideas y aprendizajes. Desliza o deja que avance solo.
+            </p>
+          </div>
+
+          <div
+            class="carousel"
+            data-carousel
+            aria-roledescription="carrusel"
+            aria-label="Slider de artículos"
+          >
+            <button
+              class="carousel-btn prev"
+              aria-label="Anterior"
+              data-prev
+            ></button>
+            <div class="track" data-track tabindex="0">
+              <!-- 7 slides (loop infinito por JS) -->
+              <figure class="slide">
+                <img
+                  src="./imagenes/genesis12.jpg"
+                  alt="Publicación del blog 1"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </figure>
+              <figure class="slide">
+                <img
+                  src="./imagenes/genesis8.jpg"
+                  alt="Publicación del blog 2"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </figure>
+              <figure class="slide">
+                <img
+                  src="./imagenes/genesis7.jpg"
+                  alt="Publicación del blog 3"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </figure>
+              <figure class="slide">
+                <img
+                  src="./imagenes/genesis6.jpg"
+                  alt="Publicación del blog 4"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </figure>
+              <figure class="slide">
+                <img
+                  src="./imagenes/genesis5.jpg"
+                  alt="Publicación del blog 5"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </figure>
+              <figure class="slide">
+                <img
+                  src="./imagenes/genesis3.jpg"
+                  alt="Publicación del blog 6"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </figure>
+              <figure class="slide">
+                <img
+                  src="./imagenes/genesis14.jpg"
+                  alt="Publicación del blog 7"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+                <!-- último slide ya cerrado -->
+              </figure>
+            </div>
+            <!-- /.track -->
+
+            <button
+              class="carousel-btn next"
+              aria-label="Siguiente"
+              data-next
+            ></button>
+          </div>
+          <!-- /.carousel -->
+
+          <div class="carousel-cta">
+            <a class="blog-cta blog-cta--outline" href="blog.html" role="button"
+              >Blog</a
+            >
+          </div>
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /#blog.section -->
+      <section
+        class="section travel-strip"
+        aria-label="Libertad de trabajar desde cualquier lugar"
+      >
+        <div class="container">
+          <p class="travel-claim">
+            Puedes viajar por el mundo al no tener que trabajar en una oficina
+          </p>
+        </div>
+      </section>
+
+      <!-- GALERÍA 1 -->
+      <section
+        id="galeria1"
+        class="section alt"
+        aria-labelledby="galeria1-title"
+      >
+        <div class="container">
+          <h2 id="galeria1-title">Galería</h2>
+          <div class="masonry">
+            <figure class="m-item">
+              <img
+                src="./imagenes/Colombia.jpg"
+                alt="Colombia"
+                loading="lazy"
+                width="900"
+                height="600"
+              />
+              <figcaption>Turquía</figcaption>
+            </figure>
+
+            <figure class="m-item">
+              <img
+                src="./imagenes/Turquia.jpg"
+                alt="Turquía"
+                loading="lazy"
+                width="900"
+                height="600"
+              />
+              <figcaption>New York</figcaption>
+            </figure>
+
+            <figure class="m-item">
+              <img
+                src="./imagenes/New York.jpg"
+                alt="Nueva York"
+                loading="lazy"
+                width="900"
+                height="600"
+              />
+              <figcaption>New York</figcaption>
+            </figure>
+
+            <figure class="m-item">
+              <img
+                src="./imagenes/New Jersey.jpg"
+                alt="Nueva Jersey"
+                loading="lazy"
+                width="900"
+                height="600"
+              />
+              <figcaption>New Jersey</figcaption>
+            </figure>
+
+            <figure class="m-item">
+              <img
+                src="./imagenes/Miami.jpg"
+                alt="Miami"
+                loading="lazy"
+                width="900"
+                height="600"
+              />
+              <figcaption>Miami</figcaption>
+            </figure>
+
+            <figure class="m-item">
+              <img
+                src="./imagenes/colombia6.png"
+                alt="Colombia"
+                loading="lazy"
+                width="900"
+                height="600"
+              />
+              <figcaption>República Dominicana</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEXTO PUENTE -->
+      <section id="texto-puente" class="section" aria-label="Reflexión">
+        <div class="container narrow">
+          <h2 id="momentos-title">Momentos</h2>
+          <p>
+            Hay un momento en la vida en el que nos detenemos y nos preguntamos:
+            ¿qué quiero realmente? Para mí, la respuesta fue clara: recuperar mi
+            tiempo, seguir mis prioridades y construir una carrera que me
+            permita vivir y viajar con libertad.
+          </p>
+          <p>
+            Trabajar de manera remota te da la libertad de crear tu propio ritmo
+            y diseñar la vida que quieres. Paso a paso, con constancia y hábitos
+            simples, puedes construir una carrera que se adapte a tus sueños,
+            sin sacrificar lo que más valoras.
+          </p>
+          <p>
+            Si esto resuena contigo, puedo acompañarte a dar esos primeros pasos
+            hacia la libertad de trabajar desde donde quieras.
+          </p>
+        </div>
+      </section>
+
+      <!-- GALERÍA 2 -->
+      <section
+        id="galeria2"
+        class="section alt"
+        aria-labelledby="galeria2-title"
+      >
+        <div class="container">
+          <div class="grid-4">
+            <img src="./imagenes/Colombia3.png" alt="Colombia" loading="lazy" />
+            <img src="./imagenes/colombia4.jpg" alt="Genesis" loading="lazy" />
+            <img src="./imagenes/Colombia3.jpg" alt="Genesis" loading="lazy" />
+            <img src="./imagenes/Colombia2.jpg" alt="Colombia" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA / CONTACTO (abrir modal) -->
+      <section class="section cta" aria-labelledby="cta-title">
+        <div class="container cta-inner">
+          <div>
+            <h2 id="cta-title">Te enseño cómo trabajar remoto desde cero</h2>
+            <p>Comencemos con un mensaje. Te respondo a la brevedad.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-cta" href="#contacto-open" data-open-modal
+              >Escríbeme</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIOS -->
+      <section
+        id="testimonios"
+        class="section"
+        aria-labelledby="testimonios-title"
+      >
+        <div class="container">
+          <h2 id="testimonios-title">Testimonios</h2>
+          <div class="testi">
+            <blockquote class="testi-item">
+              <p>
+                Un placer trabajar con una profesional como Genesis, fue muy
+                clara con las indicaciones y estoy muy agradecida por la
+                oportunidad :)
+              </p>
+              <footer>— Sophia</footer>
+            </blockquote>
+            <blockquote class="testi-item">
+              <p>
+                La experiencia con Genesis ha sido muy satisfactoria, es muy
+                agradable, comunicativa y 100% recomendable.
+              </p>
+              <footer>— Antonio F.</footer>
+            </blockquote>
+            <blockquote class="testi-item">
+              <p>
+                Genesis fue muy asertiva y comunicadora, fue muy clara con los
+                cambios y lo que quería.
+              </p>
+              <footer>— J.C</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img
+            src="./imagenes/GMC.png"
+            alt="GMC"
+            width="32"
+            height="32"
+            loading="lazy"
+          />
+          <span>Genesis Martinez Castillo</span>
+        </div>
+        <ul class="footer-links social" aria-label="Enlaces de contacto">
+          <li>
+            <a
+              href="#contacto"
+              data-open-modal
+              aria-label="Abrir formulario de contacto"
+            >
+              <img
+                src="./imagenes/correo.png"
+                alt=""
+                width="28"
+                height="28"
+                loading="lazy"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/genesis-martinez-castillo-ba123a257/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <img
+                src="./imagenes/linkedin.png"
+                alt=""
+                width="28"
+                height="28"
+                loading="lazy"
+              />
+            </a>
+          </li>
+        </ul>
+
+        <small class="copy"
+          >© <span id="year"></span> GMC. Hecho con foco y propósito.</small
+        >
+      </div>
+    </footer>
+
+    <!-- MODAL CONTACTO (FormSubmit) -->
+    <div
+      class="modal"
+      id="contacto"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contacto-title"
+      aria-hidden="true"
+    >
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="document">
+        <button class="modal-close" aria-label="Cerrar" data-close-modal>
+          &times;
+        </button>
+        <h2 id="contacto-title">Contacto</h2>
+        <p>Completa el formulario y me pongo en contacto a la brevedad.</p>
+        <form
+          id="contact-form"
+          action="https://formsubmit.co/buscotalento.global@gmail.com"
+          method="POST"
+          novalidate
+        >
+          <!-- FormSubmit config -->
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nuevo mensaje desde el sitio GMC"
+          />
+          <input type="hidden" name="_template" value="table" />
+          <div class="form-grid">
+            <label>
+              <span>Nombre y apellido *</span>
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label>
+              <span>Email *</span>
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+            <label class="full">
+              <span>Mensaje *</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-cta">Enviar</button>
+            <button type="button" class="btn btn-outline" data-close-modal>
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Config pública (COMMIT) -->
+    <script src="config/config.public.js"></script>
+    <!-- Config runtime (no versionada) -->
+    <script src="config/config.js"></script>
+    <!-- JS principal que hace todo (PayPal, Sheets, etc.) -->
+    <script src="./script.js" defer></script>
+    <script>
+      (() => {
+        // CSV publicado
+        const CSV_URL =
+          window.APP_CONFIG?.SHEET_CSV ||
+          "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwQpIYXwrWnWoiT4rYJ_e3EwPT3NTfm7cT_0m8mH6Jcsv8Qj19N77iCuvEb0D45B38kQoqiCms3UgX/pub?gid=0&single=true&output=csv";
+
+        // --- Parser CSV robusto (respeta comillas de Sheets) ---
+        function parseCSV(text) {
+          const kv = {};
+          const lines = text.split(/\r?\n/);
+          for (const rawLine of lines) {
+            if (!rawLine) continue;
+            let i = -1,
+              inQuotes = false;
+            for (let p = 0; p < rawLine.length; p++) {
+              const c = rawLine[p];
+              if (c === '"') {
+                if (rawLine[p + 1] === '"') {
+                  p++;
+                  continue;
+                }
+                inQuotes = !inQuotes;
+              } else if (c === "," && !inQuotes) {
+                i = p;
+                break;
+              }
+            }
+            if (i === -1) continue;
+            let key = rawLine.slice(0, i).trim();
+            let val = rawLine.slice(i + 1).trim();
+            if (val.startsWith('"') && val.endsWith('"')) {
+              val = val.slice(1, -1).replace(/""/g, '"');
+            }
+            if (key.startsWith('"') && key.endsWith('"')) {
+              key = key.slice(1, -1).replace(/""/g, '"');
+            }
+            if (key) kv[key] = val;
+          }
+          return kv;
+        }
+
+        // --- Helpers que no pisan si está vacío o con "..." ---
+        const shouldUse = (v) =>
+          v != null && String(v).trim() && !/^\.{3,}|…$/.test(String(v).trim());
+        const T = (sel, v) => {
+          const el = document.querySelector(sel);
+          if (el && shouldUse(v)) el.textContent = v;
+        };
+        const H = (sel, v) => {
+          const el = document.querySelector(sel);
+          if (el && shouldUse(v)) el.href = v;
+        };
+        const S = (sel, v) => {
+          const el = document.querySelector(sel);
+          if (el && shouldUse(v)) el.src = v;
+        };
+        const HTML = (sel, v) => {
+          const el = document.querySelector(sel);
+          if (el && shouldUse(v)) el.innerHTML = v;
+        };
+        const recursos = document.querySelectorAll(
+          "#recursos .resource-list .resource-item"
+        );
+        function applyKV(map) {
+          // --- HERO ---
+          T("#inicio .hero-title", map.hero_title);
+          T("#inicio .hero-sub", map.hero_sub);
+          S("#inicio .hero-media img", map.hero_image);
+
+          // --- RECURSOS (por posición) ---
+
+          if (recursos[0]) {
+            const it = recursos[0];
+            const t = (q, val) => {
+              const el = it.querySelector(q);
+              if (el && shouldUse(val)) el.textContent = val;
+            };
+            const h = (q, val) => {
+              const el = it.querySelector(q);
+              if (el && shouldUse(val)) el.href = val;
+            };
+
+            t("h3", map.r_guia_title);
+            t("p", map.r_guia_desc);
+            h("a.btn", map.r_guia_link);
+            t("a.btn", map.r_guia_btn || "Ver guía");
+          }
+
+          if (recursos[1]) {
+            const it = recursos[1];
+            const t = (q, val) => {
+              const el = it.querySelector(q);
+              if (el && shouldUse(val)) el.textContent = val;
+            };
+            const h = (q, val) => {
+              const el = it.querySelector(q);
+              if (el && shouldUse(val)) el.href = val;
+            };
+
+            t("h3", map.r_mentoria_title);
+            t("p", map.r_mentoria_desc);
+            h("a.btn", map.r_mentoria_link);
+            t("a.btn", map.r_mentoria_btn || "Agendar mentoría");
+          }
+
+          if (recursos[2]) {
+            const it = recursos[2];
+            const t = (q, val) => {
+              const el = it.querySelector(q);
+              if (el && shouldUse(val)) el.textContent = val;
+            };
+            const h = (q, val) => {
+              const el = it.querySelector(q);
+              if (el && shouldUse(val)) el.href = val;
+            };
+
+            t("h3", map.r_cv_title);
+            t("p", map.r_cv_desc);
+            h("a.btn", map.r_cv_link);
+            t("a.btn", map.r_cv_btn || "Descargar Gratis");
+          }
+
+          // título de la sección
+          T("#recursos-title", map.recursos_title);
+
+          // --- SERVICIOS (ya tenía IDs) ---
+          T("#srv1-title", map.srv1_title);
+          T("#srv1-p", map.srv1_text);
+          S("#srv1-img", map.srv1_img);
+          T("#srv1-li1", map.srv1_li1);
+          T("#srv1-li2", map.srv1_li2);
+          T("#srv1-li3", map.srv1_li3);
+          T("#srv1-li4", map.srv1_li4);
+          H("#srv1-link", map.srv1_btn_link);
+          T("#srv1-btn", map.srv1_btn_text);
+
+          T("#srv2-title", map.srv2_title);
+          T("#srv2-p", map.srv2_text);
+          S("#srv2-img", map.srv2_img);
+          T("#srv2-li1", map.srv2_li1);
+          T("#srv2-li2", map.srv2_li2);
+          T("#srv2-li3", map.srv2_li3);
+          T("#srv2-li4", map.srv2_li4);
+          H("#srv2-link", map.srv2_btn_link);
+          T("#srv2-btn", map.srv2_btn_text);
+
+          T("#srv3-title", map.srv3_title);
+          T("#srv3-p", map.srv3_text);
+          S("#srv3-img", map.srv3_img);
+          T("#srv3-li1", map.srv3_li1);
+          T("#srv3-li2", map.srv3_li2);
+          T("#srv3-li3", map.srv3_li3);
+          H("#srv3-link", map.srv3_btn_link);
+          T("#srv3-btn", map.srv3_btn_text);
+
+          // --- Mini-CTA Telegram ---
+          T("#tg-title", map.tg_title);
+          T(".tg-channel", map.tg_channel);
+          HTML(".telegram-cta .sub", map.tg_sub); // permite <strong>
+          const tgLis = document.querySelectorAll(".telegram-cta ul li");
+          if (tgLis[0])
+            tgLis[0].textContent = shouldUse(map.tg_li1)
+              ? map.tg_li1
+              : tgLis[0].textContent;
+          if (tgLis[1])
+            tgLis[1].textContent = shouldUse(map.tg_li2)
+              ? map.tg_li2
+              : tgLis[1].textContent;
+          if (tgLis[2])
+            tgLis[2].textContent = shouldUse(map.tg_li3)
+              ? map.tg_li3
+              : tgLis[2].textContent;
+
+          // --- Sobre mí ---
+          T("#sobre-title", map.sobre_title);
+          const sobreP = document.querySelectorAll("#sobre .container p");
+          if (sobreP[0])
+            sobreP[0].textContent = shouldUse(map.sobre_p1)
+              ? map.sobre_p1
+              : sobreP[0].textContent;
+          if (sobreP[1])
+            sobreP[1].textContent = shouldUse(map.sobre_p2)
+              ? map.sobre_p2
+              : sobreP[1].textContent;
+          const sobreLi = document.querySelectorAll("#sobre .about-bullets li");
+          if (sobreLi[0])
+            sobreLi[0].textContent = shouldUse(map.sobre_b1)
+              ? map.sobre_b1
+              : sobreLi[0].textContent;
+          if (sobreLi[1])
+            sobreLi[1].textContent = shouldUse(map.sobre_b2)
+              ? map.sobre_b2
+              : sobreLi[1].textContent;
+          if (sobreLi[2])
+            sobreLi[2].textContent = shouldUse(map.sobre_b3)
+              ? map.sobre_b3
+              : sobreLi[2].textContent;
+          if (sobreLi[3])
+            sobreLi[3].textContent = shouldUse(map.sobre_b4)
+              ? map.sobre_b4
+              : sobreLi[3].textContent;
+          T("#sobre-modal-title", map.sobre_modal_title);
+          const modalP = document.querySelectorAll(
+            "#sobre-modal .modal-body p"
+          );
+          if (modalP[0])
+            modalP[0].textContent = shouldUse(map.sobre_modal_p1)
+              ? map.sobre_modal_p1
+              : modalP[0].textContent;
+          if (modalP[1])
+            modalP[1].textContent = shouldUse(map.sobre_modal_p2)
+              ? map.sobre_modal_p2
+              : modalP[1].textContent;
+          if (modalP[2])
+            modalP[2].textContent = shouldUse(map.sobre_modal_p3)
+              ? map.sobre_modal_p3
+              : modalP[2].textContent;
+
+          // --- Blog / Viaje ---
+          T("#blog-title", map.blog_title);
+          T("#blog .section-desc", map.blog_desc);
+          T(".travel-strip .travel-claim", map.travel_claim);
+
+          // --- Galería 1 ---
+          T("#galeria1-title", map.galeria1_title);
+          const caps = document.querySelectorAll(
+            "#galeria1 .masonry figcaption"
+          );
+          if (caps[0])
+            caps[0].textContent = shouldUse(map.fig1_caption)
+              ? map.fig1_caption
+              : caps[0].textContent;
+          if (caps[1])
+            caps[1].textContent = shouldUse(map.fig2_caption)
+              ? map.fig2_caption
+              : caps[1].textContent;
+          if (caps[2])
+            caps[2].textContent = shouldUse(map.fig3_caption)
+              ? map.fig3_caption
+              : caps[2].textContent;
+          if (caps[3])
+            caps[3].textContent = shouldUse(map.fig4_caption)
+              ? map.fig4_caption
+              : caps[3].textContent;
+          if (caps[4])
+            caps[4].textContent = shouldUse(map.fig5_caption)
+              ? map.fig5_caption
+              : caps[4].textContent;
+          if (caps[5])
+            caps[5].textContent = shouldUse(map.fig6_caption)
+              ? map.fig6_caption
+              : caps[5].textContent;
+
+          // --- Texto puente + CTA contacto ---
+          T("#momentos-title", map.momentos_title);
+          const puenteP = document.querySelectorAll(
+            "#texto-puente .container p"
+          );
+          if (puenteP[0])
+            puenteP[0].textContent = shouldUse(map.mom_p1)
+              ? map.mom_p1
+              : puenteP[0].textContent;
+          if (puenteP[1])
+            puenteP[1].textContent = shouldUse(map.mom_p2)
+              ? map.mom_p2
+              : puenteP[1].textContent;
+          if (puenteP[2])
+            puenteP[2].textContent = shouldUse(map.mom_p3)
+              ? map.mom_p3
+              : puenteP[2].textContent;
+          T("#cta-title", map.cta_title);
+          T(".cta .container p", map.cta_p);
+          T(".cta .cta-actions .btn.btn-cta", map.cta_btn);
+
+          // --- Testimonios ---
+          T("#testimonios-title", map.testimonios_title);
+          const items = document.querySelectorAll(
+            "#testimonios .testi .testi-item"
+          );
+          if (items[0]) {
+            const p = items[0].querySelector("p"),
+              f = items[0].querySelector("footer");
+            if (p)
+              p.textContent = shouldUse(map.testi1_p)
+                ? map.testi1_p
+                : p.textContent;
+            if (f)
+              f.textContent = shouldUse(map.testi1_f)
+                ? map.testi1_f
+                : f.textContent;
+          }
+          if (items[1]) {
+            const p = items[1].querySelector("p"),
+              f = items[1].querySelector("footer");
+            if (p)
+              p.textContent = shouldUse(map.testi2_p)
+                ? map.testi2_p
+                : p.textContent;
+            if (f)
+              f.textContent = shouldUse(map.testi2_f)
+                ? map.testi2_f
+                : f.textContent;
+          }
+          if (items[2]) {
+            const p = items[2].querySelector("p"),
+              f = items[2].querySelector("footer");
+            if (p)
+              p.textContent = shouldUse(map.testi3_p)
+                ? map.testi3_p
+                : p.textContent;
+            if (f)
+              f.textContent = shouldUse(map.testi3_f)
+                ? map.testi3_f
+                : f.textContent;
+          }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          fetch(CSV_URL + "&cb=" + Date.now())
+            .then((r) => r.text())
+            .then((txt) => {
+              console.log("RAW CSV (primeros 200):", txt.slice(0, 200));
+              return parseCSV(txt);
+            })
+            .then((kv) => {
+              console.log("CSV hero_title =", kv.hero_title);
+              // Chequeo rápido de aplicación
+              const before = document.querySelector(
+                "#inicio .hero-title"
+              )?.textContent;
+              applyKV(kv);
+              const after = document.querySelector(
+                "#inicio .hero-title"
+              )?.textContent;
+              console.log("Hero title antes/after:", { before, after });
+            })
+            .catch((err) => console.error("Sheets CSV error:", err));
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const booked =
+          new URLSearchParams(location.search).get("booked") === "1";
+        if (!booked) return;
+
+        // Banner simple (toast)
+        const div = document.createElement("div");
+        div.setAttribute("role", "status");
+        div.style.cssText =
+          "position:fixed;left:1rem;right:1rem;bottom:1rem;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px 16px;box-shadow:0 10px 20px rgba(0,0,0,.08);z-index:9999";
+        div.innerHTML = `
+      <strong>¡Listo!</strong> Tu mentoría quedó agendada ✅.
+      <button id="toastClose" style="float:right;border:0;background:transparent;font-size:16px;cursor:pointer" aria-label="Cerrar">✕</button>
+    `;
+        document.body.appendChild(div);
+        document.getElementById("toastClose").onclick = () => div.remove();
+        setTimeout(() => div.remove(), 7000);
+      })();
+    </script>
+  </body>
+</html>

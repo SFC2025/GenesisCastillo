@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es-AR" data-theme="turquesa">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Guía de Trabajo Remoto — E-Book</title>
+    <meta
+      name="description"
+      content="Guía práctica para conseguir tu primer trabajo remoto y generar ingresos desde casa."
+    />
+    <link rel="icon" href="./imagenes/GMC.png" type="image/png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./ebook.css" />
+  </head>
+  <body class="landing">
+    <header class="site-header compact" role="banner">
+      <div class="container header-inner">
+        <a href="index.html#inicio" class="brand" aria-label="Volver al inicio">
+          <img src="./imagenes/GMC.png" alt="GMC" width="36" height="36" />
+          <span class="brand-text">Genesis Martinez Castillo</span>
+        </a>
+
+        <!-- Botón hamburguesa (solo mobile) -->
+        <button
+          class="nav-toggle"
+          aria-controls="mini-nav"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="nav-bar"></span>
+          <span class="nav-bar"></span>
+          <span class="nav-bar"></span>
+        </button>
+
+        <!-- Mini menú -->
+        <ul id="mini-nav" class="mini-nav" role="menu">
+          <li><a href="index.html#inicio" role="menuitem">Inicio</a></li>
+          <li><a href="index.html#productos" role="menuitem">Productos</a></li>
+          <li>
+            <a href="#contacto" data-open-modal role="menuitem">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main id="ebook">
+      <section id="ebook-hero" class="hero simple">
+        <div class="container">
+          <div class="hero-center">
+            <h1>Guía de Trabajo Remoto Desde Cero</h1>
+            <p class="sub">Cómo empezar tu carrera desde casa</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="beneficios">
+        <div class="container narrow">
+          <h2 id="beneficios">Lo que te llevás</h2>
+
+          <p class="intro">
+            Si siempre has querido trabajar desde casa pero no sabes por dónde
+            empezar, esta guía es para ti. La diseñé pensando en personas que
+            inician desde cero, sin experiencia previa y con muchas dudas, tal
+            como yo estuve al principio.
+          </p>
+
+          <ul class="bullets checks">
+            <li>
+              Encontrar tu primer empleo remoto aunque no tengas experiencia.
+            </li>
+            <li>Evitar errores y estafas que hacen perder tiempo y dinero.</li>
+            <li>
+              Descubrir tus habilidades y convertirlas en ingresos reales desde
+              casa.
+            </li>
+            <li>Conocer los empleos más buscados y cómo aplicar a ellos.</li>
+            <li>
+              Organizarte y crear rutinas efectivas (incluso si tienes niños en
+              casa).
+            </li>
+          </ul>
+
+          <!-- PayPal -->
+          <!-- Recuadro de pago -->
+          <div
+            class="paycard"
+            style="
+              max-width: 720px;
+              width: min(100%, 720px);
+              margin: 1rem auto 0;
+            "
+          >
+            <div class="paycard-text">
+              <h3 style="margin: 0">Guía de Trabajo Remoto Desde Cero</h3>
+              <p class="muted" style="margin: 0.25rem 0 0.75rem">
+                Precio: <strong>USD 17</strong> (pago único)
+              </p>
+              <p class="muted small">
+                Al finalizar el pago, recibirás el enlace de descarga y
+                recomendaciones para empezar hoy mismo.
+              </p>
+            </div>
+            <div id="paypal-container-TV2PUYLEXR4DS"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img
+            src="./imagenes/GMC.png"
+            alt="GMC"
+            width="32"
+            height="32"
+            loading="lazy"
+          />
+          <span>Genesis Martinez Castillo</span>
+        </div>
+        <ul class="footer-links social" aria-label="Enlaces de contacto">
+          <li>
+            <!-- abre el modal -->
+            <a
+              href="#contacto"
+              data-open-modal
+              aria-label="Abrir formulario de contacto"
+            >
+              <img
+                src="./imagenes/correo.png"
+                alt=""
+                width="22"
+                height="22"
+                loading="lazy"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/genesis-martinez-castillo-ba123a257/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <img
+                src="./imagenes/linkedin.png"
+                alt=""
+                width="22"
+                height="22"
+                loading="lazy"
+              />
+            </a>
+          </li>
+        </ul>
+
+        <small class="copy"
+          >© <span id="year"></span> GMC. Hecho con foco y propósito.</small
+        >
+      </div>
+    </footer>
+
+    <!-- MODAL CONTACTO (FormSubmit) -->
+    <div
+      class="modal"
+      id="contacto"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contacto-title"
+      aria-hidden="true"
+    >
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="document">
+        <button class="modal-close" aria-label="Cerrar" data-close-modal>
+          &times;
+        </button>
+
+        <h2 id="contacto-title">Contacto</h2>
+        <p>Completa el formulario y me pongo en contacto a la brevedad.</p>
+
+        <form
+          id="contact-form"
+          action="https://formsubmit.co/buscotalento.global@gmail.com"
+          method="POST"
+          novalidate
+        >
+          <!-- FormSubmit config -->
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nuevo mensaje desde el sitio GMC"
+          />
+          <input type="hidden" name="_template" value="table" />
+          <!-- opcional: redirección post-envío -->
+          <input type="hidden" name="_next" value="gracias.html?product=guia" />
+          <!-- honeypot antispam -->
+          <input type="text" name="_honey" style="display: none" />
+
+          <div class="form-grid">
+            <label>
+              <span>Nombre y apellido *</span>
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label>
+              <span>Email *</span>
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+            <label class="full">
+              <span>Mensaje *</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-cta">Enviar</button>
+            <button type="button" class="btn btn-outline" data-close-modal>
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Config pública (COMMIT) -->
+    <script src="config/config.public.js"></script>
+    <!-- Config privada local (IGNORADA; puede 404 en Pages y no pasa nada) -->
+    <script src="config/config.js"></script>
+    <!-- JS principal que hace todo (PayPal, Sheets, etc.) -->
+    <script src="./script.js" defer></script>
+    <script>
+      (function () {
+        const header = document.querySelector(".site-header.compact");
+        const btn = header?.querySelector(".nav-toggle");
+        const menu = header?.querySelector(".mini-nav");
+        if (!header || !btn || !menu) return;
+
+        const close = () => {
+          header.classList.remove("is-open");
+          btn.setAttribute("aria-expanded", "false");
+        };
+        const open = () => {
+          header.classList.add("is-open");
+          btn.setAttribute("aria-expanded", "true");
+        };
+
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          header.classList.toggle("is-open");
+          btn.setAttribute(
+            "aria-expanded",
+            header.classList.contains("is-open")
+          );
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!header.contains(e.target)) close();
+        });
+        menu.addEventListener("click", (e) => {
+          if (e.target.closest("a")) close();
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") close();
+        });
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 840) close();
+        });
+      })();
+    </script>
+    <script>
+      (() => {
+        const SHEET_CSV =
+          "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwQpIYXwrWnWoiT4rYJ_e3EwPT3NTfm7cT_0m8mH6Jcsv8Qj19N77iCuvEb0D45B38kQoqiCms3UgX/pub?gid=1211920848&single=true&output=csv";
+
+        const map = {
+          // HERO
+          e_hero_title: () => document.querySelector("#ebook-hero h1"),
+          e_hero_sub: () => document.querySelector("#ebook-hero .sub"),
+
+          // BENEFICIOS
+          e_beneficios_title: () => document.querySelector("#beneficios"),
+          e_intro: () => document.querySelector("#ebook .section .intro"),
+
+          e_inc_1: () =>
+            document.querySelector("#ebook .bullets.checks li:nth-child(1)"),
+          e_inc_2: () =>
+            document.querySelector("#ebook .bullets.checks li:nth-child(2)"),
+          e_inc_3: () =>
+            document.querySelector("#ebook .bullets.checks li:nth-child(3)"),
+          e_inc_4: () =>
+            document.querySelector("#ebook .bullets.checks li:nth-child(4)"),
+          e_inc_5: () =>
+            document.querySelector("#ebook .bullets.checks li:nth-child(5)"),
+
+          // PAGO / CTA
+          e_pay_title: () => document.querySelector("#ebook .paycard-text h3"),
+          e_pay_price_label: () =>
+            document.querySelector(
+              "#ebook .paycard-text .muted:nth-of-type(1)"
+            ),
+          e_pay_note: () =>
+            document.querySelector("#ebook .paycard-text .muted.small"),
+        };
+
+        function setContent(el, value) {
+          if (!el || !value) return;
+          el.textContent = value;
+        }
+
+        function parseCSV(text) {
+          const lines = text.split(/\r?\n/).filter(Boolean);
+          const kv = {};
+          for (const line of lines) {
+            const i = line.indexOf(",");
+            if (i === -1) continue;
+            const key = line.slice(0, i).trim();
+            const val = line.slice(i + 1).trim();
+            if (key) kv[key] = val;
+          }
+          return kv;
+        }
+
+        function applyKV(kv) {
+          Object.keys(map).forEach((k) => {
+            const el = map[k] && map[k]();
+            setContent(el, kv[k]);
+          });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          const isEbook = document.querySelector("main#ebook");
+          if (!isEbook) return;
+
+          fetch(SHEET_CSV)
+            .then((r) => r.text())
+            .then(parseCSV)
+            .then(applyKV)
+            .catch((e) => console.error("Error cargando Sheet:", e));
+        });
+      })();
+    </script>
+  </body>
+</html>
