@@ -166,7 +166,22 @@
 
         // NUEVO: parámetros que llegan desde el redirect de Calendly
         const scheduled = qs.get("scheduled") === "1";
-        const inviteeEmail = qs.get("invitee_email") || "";
+        const inviteeEmail = (qs.get("invitee_email") || "").trim();
+
+        // Helper de seguridad para insertar texto en HTML
+        function escapeHTML(str) {
+          return str.replace(
+            /[&<>"']/g,
+            (m) =>
+              ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;",
+              }[m])
+          );
+        }
 
         const box = document.getElementById("postpay");
         const subEl = document.getElementById("sub");
@@ -236,9 +251,12 @@
       <h2>¡Mentoría agendada! ✅</h2>
       ${
         inviteeEmail
-          ? `<p>Te enviamos la invitación a <strong>${inviteeEmail}</strong>.</p>`
+          ? `<p>Te enviamos la invitación a <strong>${escapeHTML(
+              inviteeEmail
+            )}</strong>.</p>`
           : ""
       }
+
       <p class="help">Vas a ser redirigido al inicio en unos segundos…</p>
       <p><a class="btn btn-outline" href="index.html">Ir ahora</a></p>
     `;
