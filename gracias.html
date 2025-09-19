@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex,nofollow"> <!-- evitar indexación -->
+    <meta name="robots" content="noindex,nofollow" />
+    <!-- evitar indexación -->
     <title>¡Gracias por tu compra!</title>
     <link rel="stylesheet" href="./style.css" />
     <style>
@@ -227,34 +228,51 @@
         <p><a class="btn btn-outline" href="${tgLink}" target="_blank" rel="noopener">Entrar al canal de Telegram</a></p>
       `;
         } else if (product === "mentoria") {
-          // Dos estados: antes de reservar (embed) y después (retorno desde Calendly)
+          const paid = qs.get("paid") === "1";
+
           if (scheduled) {
+            // Vuelve desde Calendly (reserva confirmada)
             html = `
-          <h2>¡Mentoría agendada! ✅</h2>
-          ${
-            inviteeEmail
-              ? `<p>Te enviamos la invitación a <strong>${inviteeEmail}</strong>.</p>`
-              : ""
-          }
-          <p class="help">Vas a ser redirigido al inicio en unos segundos…</p>
-          <p><a class="btn btn-outline" href="index.html">Ir ahora</a></p>
-        `;
-            // Auto-redirect al home a los 6s (para no molestar)
+      <h2>¡Mentoría agendada! ✅</h2>
+      ${
+        inviteeEmail
+          ? `<p>Te enviamos la invitación a <strong>${inviteeEmail}</strong>.</p>`
+          : ""
+      }
+      <p class="help">Vas a ser redirigido al inicio en unos segundos…</p>
+      <p><a class="btn btn-outline" href="index.html">Ir ahora</a></p>
+    `;
             setTimeout(() => {
               location.replace("index.html?booked=1");
             }, 3000);
-          } else {
+          } else if (paid) {
+            // Pagó y volvió desde PayPal: mostrar Calendly
+            setSub(
+              "Sigue el siguiente paso: te llevará a un calendario para agendar tu mentoría."
+            );
             html = `
-          <h2>¡Pago recibido! ✅</h2>
-          <div class="calendly-inline-widget" data-url="${calendlyBase}" style="min-width:100%;height:780px;"></div>
-          <p class="fallback-calendly">
-            ¿No ves el calendario?
-            <a class="btn btn-outline" href="${calendlyBase}" target="_blank" rel="noopener">Abrir calendario en una pestaña nueva</a>
-          </p>
-          <p class="help">Si no ves horarios, escribenos a
-            <a href="mailto:buscotalento.global@gmail.com">buscotalento.global@gmail.com</a>.
-          </p>
-        `;
+      <h2>¡Pago recibido! ✅</h2>
+      <div class="calendly-inline-widget" data-url="${calendlyBase}" style="min-width:100%;height:780px;"></div>
+      <p class="fallback-calendly">
+        ¿No ves el calendario?
+        <a class="btn btn-outline" href="${calendlyBase}" target="_blank" rel="noopener">Abrir calendario en una pestaña nueva</a>
+      </p>
+      <p class="help">Si no ves horarios, escribenos a
+        <a href="mailto:buscotalento.global@gmail.com">buscotalento.global@gmail.com</a>.
+      </p>
+    `;
+          } else {
+            // No viene con paid=1: bloquear Calendly
+            setSub(
+              "Para ver el calendario de mentoría primero tenés que completar el pago."
+            );
+            html = `
+      <h2>Falta confirmar el pago</h2>
+      <p>Volvé al botón de Mentoría y, una vez acreditado, te redirigimos automáticamente a esta página con el calendario habilitado.</p>
+      <p class="help">Si ya pagaste y no te redirigió, escribenos con tu <em>ID de transacción</em> de PayPal a
+        <a href="mailto:buscotalento.global@gmail.com">buscotalento.global@gmail.com</a>.
+      </p>
+    `;
           }
         }
 
