@@ -7,6 +7,11 @@
     <!-- evitar indexación -->
     <title>¡Gracias por tu compra!</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://assets.calendly.com/assets/external/widget.css"
+    />
+
     <style>
       /* Contenedor general */
       .gracias {
@@ -295,6 +300,21 @@
         }
 
         box.innerHTML = html;
+        // Asegura el render cuando el widget se inyecta dinámicamente
+        if (product === "mentoria" && qs.get("paid") === "1") {
+          const mount = document.querySelector(".calendly-inline-widget");
+          const init = () => {
+            if (window.Calendly && mount && !mount.dataset.inited) {
+              mount.dataset.inited = "1";
+              Calendly.initInlineWidget({
+                url: calendlyBase,
+                parentElement: mount,
+              });
+            }
+          };
+          init();
+          window.addEventListener("load", init, { once: true });
+        }
       })();
     </script>
 
