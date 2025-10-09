@@ -101,6 +101,17 @@
               </p>
             </div>
             <div id="paypal-container-TV2PUYLEXR4DS"></div>
+            <script>
+              // Render del botón hospedado (E-Book)
+              window.addEventListener("load", function () {
+                paypal
+                  .HostedButtons({
+                    hostedButtonId: "TV2PUYLEXR4DS",
+                  })
+                  .render("#paypal-container-TV2PUYLEXR4DS");
+              });
+            </script>
+
             <p class="muted small" style="margin-top: 8px">
               Si el pago no te abre, dale a
               <strong>“Abrir en navegador”</strong> o hazlo desde
@@ -402,5 +413,6 @@
         });
       })();
     </script>
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAP7BiuV6QunHHh02T2CM6SucywtCkUz9Ek5u2UySIbPCYJw5jwLongDPW5Q70a0nH1fydK-xHyNbm9j0&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
   </body>
 </html>
